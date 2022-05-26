@@ -1,0 +1,149 @@
+<?php
+session_start();
+if (!isset($_COOKIE['access_token'], $_COOKIE['email']))
+{
+    header("Location: auth");
+    die();
+}
+$access_token = $_COOKIE['access_token'];
+$email = $_COOKIE['email'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Выбор кампаний, для которых вы хотите включить защиту" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://w.tb.ru/open-messenger/widget?wId=W-99ED40DAD6EE41B49E42666C07CA47BC"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.min.js"></script>
+  <script src="js/account-menu.min.js"></script>
+  <script src="js/campaigns.min.js"></script>
+  <title>LifeClick - Профиль</title>
+</head>
+
+<body>
+  <div class="profile-header">
+    <div class="profile-header__logo"></div>
+    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt=""></a>
+    <div class="profile-header__wrap">
+
+      <div class="balance">
+        <div class="balance__status">
+          <p class="profile-header__text">Баланс</p>
+          <span id="amount">0,00 ₽</span>
+        </div>
+        <div class="balance__button">
+          <a href="#" class="balance__link">Пополнить</a>
+        </div>
+      </div>
+      <div class="profile-header__info">
+        <p class="profile-header__text">Аккаунт</p>
+        <a href="#" class="profile-header__account"><?php echo $email ?></a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="sidebar">
+    <h4 class="sidebar__title">
+      Управление
+    </h4>
+    <ul class="sidebar__menu">
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
+          Защита от скликивания
+        </a>
+      </li>
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
+          Управление ставками
+        </a>
+      </li>
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
+          Минусатор
+        </a>
+      </li>
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+          Чат для сайта
+        </a>
+      </li>
+    </ul>
+
+    <h4 class="sidebar__title">
+      Инструменты
+    </h4>
+    <ul class="sidebar__menu sidebar__menu--tools">
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
+          Работа с семантическим ядром: удаление дубликатов
+        </a>
+      </li>
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
+          Генератор UTM-меток
+        </a>
+      </li>
+    </ul>
+
+    <ul class="sidebar__menu sidebar__menu--bottom">
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+          Тарифы
+        </a>
+      </li>
+      <li class="sidebar__menu-item">
+        <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+          Помощь
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="company">
+      <h1 class="company__title">Мои кампании</h1>
+      <p class="company__description">
+        Выберите кампании, для которых вы хотите включить защиту.<br>
+        <b>Внимание!</b> Рекомендуем использовать защиту от скликивания в кампаниях, показы которых настроены на Москву
+        и МО, Санкт-Петербург, а также города с населением более 1 млн.
+        Не рекомендуем использовать защиту в кампаниях, показы которых настроены на города Дальнего Востока,
+        Калининград, а также на города с населением меньше 1 млн. Сервис автоматизированного управления ставками не
+        имеет географической привязанности.
+      </p>
+      <div class="company__check">
+        <div class="company-header__check">
+          <label class="company-header__checkbox">
+            <input type="checkbox" value="yes">
+            <span class="company-header__checkmark"></span>
+          </label>
+          <p class="company-header__title">Выбрать все</p>
+        </div>
+        <div class="company-header__button-box">
+          <button class="company-header__button company-header__button--bid">Управление ставками</button>
+          <button class="company-header__button company-header__button--off">Отключить</button>
+          <button class="company-header__button company-header__button--on">Включить</button>
+        </div>
+      </div>
+      <div class="company__info">
+      </div>
+      <div class="company__access"></div>
+      <div class="company__access-box">
+        <h3 class="company-access__title">Для продолжения предоставьте доступ к Яндекс.Директ</h3>
+        <p class="company-access__description">Это необходимо, чтобы мы с помощью Яндекс.Директ API могли получить
+          доступ к вашим рекламным кампаниям и автоматически управлять корректировками ставок.</p>
+        <button id="company-access" class="button company-access__button">Предоставить доступ</button>
+      </div>
+      <h2 class="company__none">Список ваших кампаний пуст</h2>
+    </div>
+  </div>
+  </div>
+  <div class="pop-up"></div>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<?php
+session_start();
+if (!isset($_COOKIE['access_token'], $_COOKIE['email']))
+{
+    header("Location: auth");
+    die();
+}
+$access_token = $_COOKIE['access_token'];
+$email = $_COOKIE['email'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Пополнение баланса, подключение тарифа и включение автоплатежа"/>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <style>.tinkoffPayRow{display:block;margin:1%;width:160px;}</style>
+    <script src="https://w.tb.ru/open-messenger/widget?wId=W-99ED40DAD6EE41B49E42666C07CA47BC"></script>
+    <script src="https://securepay.tinkoff.ru/html/payForm/js/tinkoff_v2.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/account-menu.min.js"></script>
+    <script src="js/balance.min.js"></script>
+    <title>LifeClick - Профиль</title>
+</head>
+<body>
+    <div class="profile-header">
+        <div class="container">
+            <div class="profile-header__logo"></div>
+		<a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt=""></a>
+            <div class="profile-header__wrap">
+                <div class="balance">
+                    <div class="balance__status">
+                        <p class="profile-header__text">Баланс</p>
+                        <span id="amount">0,00 ₽</span>
+                    </div>
+                    <div class="balance__button">
+                        <a href="#" class="balance__link">Пополнить</a>
+                    </div>
+                </div>
+                <div class="profile-header__info">
+                    <p class="profile-header__text">Аккаунт</p>
+                    <a href="#" class="profile-header__account"><?php echo $email ?></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+       <div class="account__balance">
+	<a href="#" class="profile-info__back">Вернуться к кампаниям</a>
+        <h2 class="profile-info__title">Баланс</h2>
+        <p class="profile-info__description">Здесь можно пополнить баланс, подключить тариф и включить автоплатеж.</p>
+           <ul class="account-balance__list">
+                <li class="account-balance__item account-balance__item--subscribe">
+                    <h3 class="balance-item__title balance-item__title--subscribe">Подписка</h3>
+                    <span>-</span>
+                </li>
+               <li class="account-balance__item">
+                    <h3 class="balance-item__title">Пополнить баланс</h3>
+                    <p class="balance-item__description">Пополнить счет на указанную вами сумму.</p>
+                    <input type="text" class="balance-item__summ" placeholder="Сумма пополнения"><button id="balance-up" class="button balance-item__summ--up">Пополнить</button>
+                    <div class="balance-item__autopay">
+                        <label class="balance-item__accept">
+                            <input type="checkbox" value="yes">
+                            <p class="balance-item__checkmark"></p>
+                            Подключить автоплатёж
+                        </label>
+                    </div>
+                </li>
+                <li class="account-balance__item">
+                    <h3 class="balance-item__title">Отключить автоплатёж</h3>
+                    <p class="balance-item__disconnect">Подключен</p>
+                    <p class="balance-item__description">С вашей карты будет автоматически списываться сумма тарифа каждый месяц.</p>
+                    
+                </li>
+           </ul>
+        <h2 class="profile-info__title">Тарифы</h2>
+        <ul class="price__list account__price">
+            <li id="616c096755cd9" class="price-item">
+                <h3 class="price-item__title">Базовый</h3>
+                <p class="price-item__cost">1 990 ₽</p>
+                <ul class="price-item__services">
+                    <li class="service-item service-item--yes">3 рекламных кампании для защиты от скликивания</li>
+                    <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+                    <li class="service-item service-item--yes">Автоматическое управление ставками: 1000<br>ключевых фраз</li>
+                    <li class="service-item service-item--no">Персональный менеджер</li>
+                </ul>
+                <div class="price-item__button">
+                    <a href="#" class="price-item__button--wide button">Выбрать план</a>
+                </div>
+            </li>
+            <li id="616c099a82bc4" class="price-item">
+                <h3 class="price-item__title">Стандарт</h3>
+                <p class="price-item__cost">4 990 ₽</p>
+                <ul class="price-item__services">
+                    <li class="service-item service-item--yes">10 рекламных кампаний для защиты от скликивания</li>
+                    <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+                    <li class="service-item service-item--yes">Автоматическое управление ставками:<br>5000 ключевых фраз</li>
+                    <li class="service-item service-item--yes">Персональный менеджер</li>
+                </ul>
+                <div class="price-item__button">
+                    <a href="#" class="price-item__button--wide button">Выбрать план</a>
+                </div>
+            </li>
+            <li id="616c099b01e44" class="price-item">
+                <h3 class="price-item__title">VIP</h3>
+                <p class="price-item__cost">9 990 ₽</p>
+                <ul class="price-item__services">
+                    <li class="service-item service-item--yes">100 рекламных кампаний для защиты от скликивания</li>
+                    <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+                    <li class="service-item service-item--yes">Автоматическое управление ставками:<br>Неограниченное количество ключевых фраз</li>
+                    <li class="service-item service-item--yes">Персональный менеджер</li>
+                </ul>
+                <div class="price-item__button">
+                    <a href="#" class="price-item__button--wide button">Выбрать план</a>
+                </div>
+            </li>
+        </ul>
+        <h2 class="profile-info__title">История операций</h2>
+        <div class="account__history"></div>
+	<div class="company__access"></div>
+                <div class="company__access-box">
+                    <h3 class="company-access__title">Подтвердите выбор тарифа “Базовый”</h3>
+                    <p class="company-access__description">После по подтверждения с вашего баланса будет списанна сумма тарифа “Базовый” 990 ₽</p>
+                    <button id="rate-cancel" class="button company-access__rate company-access__rate--cancel">Отмена</button>
+                    <button id="rate-ok" class="button company-access__rate company-access__rate--ok">Подтверждение</button>
+                </div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-up"></div>
+</body>
+</html>

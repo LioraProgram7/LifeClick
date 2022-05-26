@@ -1,0 +1,42 @@
+<?php
+session_start();
+if (isset($_COOKIE['access_token'], $_COOKIE['email']))
+{
+    header("Location: campaigns");
+    die();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Вход в аккаунт"/>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://w.tb.ru/open-messenger/widget?wId=W-99ED40DAD6EE41B49E42666C07CA47BC"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/auth.min.js"></script>
+    <title>LifeClick - Авторизация</title>
+</head>
+<body>
+    <div class="auth__bg">
+        <div class="container">
+            <div class="logo-reg"></div>
+            <div class="auth-box">
+                <h2 class="auth-box__title">Авторизация</h2>
+                <input type="email" class="auth-box__input" placeholder="E-mail"><div class="auth-box__error--email"></div>
+                <input type="password" class="auth-box__input" placeholder="Пароль"><div class="auth-box__error--password"></div>
+                <button class="button auth-box__button">Войти</button>
+                <ul class="auth-box__buttons">
+                    <li><a href="reg" class="auth-box__link">Зарегистрироваться</a></li>
+                    <li><a href="#" class="auth-box__link">Забыли пароль?</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="pop-up"></div>
+</body>
+</html>
