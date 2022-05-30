@@ -1,13 +1,3 @@
-<?php
-session_start();
-if (!isset($_COOKIE['access_token'], $_COOKIE['email']))
-{
-    header("Location: auth");
-    die();
-}
-$access_token = $_COOKIE['access_token'];
-$email = $_COOKIE['email'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,18 +5,12 @@ $email = $_COOKIE['email'];
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Изменение настроек аккаунта" />
-  <meta http-equiv="Cache-Control" content="no-cache" />
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://w.tb.ru/open-messenger/widget?wId=W-99ED40DAD6EE41B49E42666C07CA47BC"></script>
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="js/script.min.js"></script>
-  <script src="js/account-edit.min.js"></script>
-  <script src="js/account-menu.min.js"></script>
-  <title>LifeClick - Профиль</title>
+  <title>Document</title>
 </head>
 
 <body>
+
   <div class="profile-header">
     <div class="profile-header__logo"></div>
     <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
@@ -49,8 +33,8 @@ $email = $_COOKIE['email'];
   </div>
 
   <div class="content">
-    
     <nav class="sidebar">
+
       <div class="sidebar__wrap profile-header__wrap">
         <div class="profile-header__info">
           <p class="profile-header__text">Аккаунт</p>
@@ -96,7 +80,7 @@ $email = $_COOKIE['email'];
       <h4 class="sidebar__title">
         Инструменты
       </h4>
-      <ul class="sidebar__menu sidebar__menu--toolsAccount">
+      <ul class="sidebar__menu sidebar__menu--tools">
         <li class="sidebar__menu-item sidebar__menu-item--dublicate">
           <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
             Работа с семантическим ядром: удаление дубликатов
@@ -122,43 +106,8 @@ $email = $_COOKIE['email'];
         </li>
       </ul>
     </nav>
-
-    <a href="#" class="profile-info__back">Вернуться к кампаниям</a>
-    <div class="profile-info">
-      <div class="profile-info__change">
-        <h1 class="profile-info__title">
-          Персональная информация
-        </h1>
-        <p class="profile-info__description">
-          Здесь можно изменить настройки аккаунта.
-        </p>
-        <input type="E-mail" class="profile-info__input" placeholder="E-mail">
-        <input type="tel" class="profile-info__input" placeholder="Телефон" minlength="9" maxlength="14">
-        <h1 class="profile-info__title profile-info__title--parol">Сменить пароль</h1>
-        <input id="old-password" type="password" class="profile-info__input" placeholder="Старый пароль">
-        <input id="new-password" type="password" class="profile-info__input" placeholder="Новый пароль">
-        <input id="new-password-accept" type="password" class="profile-info__input" placeholder="Подтверждение пароль">
-        <button id="button-save" class="button profile-info__button profile-info__button--save">Сохранить</button>
-        <p class="profile-info__yandex">
-          Яндекс аккаунт привязан
-        </p>
-        <button id="button-yandex--action" class="button profile-info__button profile-info__button--yandex">
-          Отвязать Яндекс аккаунт
-        </button>
-        <button id="button-exit" class="button profile-info__button profile-info__button--exit">Выход из
-          аккаунта</button>
-      </div>
-    </div>
   </div>
 
-  <div class="company__access"></div>
-  <div class="company__access-box">
-    <h3 class="company-access__title">Отвязка Яндекс аккаунта</h3>
-    <p class="company-access__description">При отвязке аккаунта, защита со всех ваших кампаний будет снята</p>
-    <button id="rate-cancel" class="button company-access__rate company-access__rate--cancel">Отмена</button>
-    <button id="rate-ok" class="button company-access__rate company-access__rate--ok">Подтверждение</button>
-  </div>
-  <div class="pop-up"></div>
 </body>
 
 </html>

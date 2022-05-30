@@ -27,9 +27,10 @@ $email = $_COOKIE['email'];
 </head>
 
 <body>
+
   <div class="profile-header">
     <div class="profile-header__logo"></div>
-    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt=""></a>
+    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
     <div class="profile-header__wrap">
 
       <div class="balance">
@@ -43,107 +44,474 @@ $email = $_COOKIE['email'];
       </div>
       <div class="profile-header__info">
         <p class="profile-header__text">Аккаунт</p>
-        <a href="#" class="profile-header__account"><?php echo $email ?></a>
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
       </div>
     </div>
   </div>
 
-  <nav class="sidebar">
-    <h4 class="sidebar__title">
-      Управление
-    </h4>
-    <ul class="sidebar__menu">
-      <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
-          Защита от скликивания
-        </a>
-      </li>
-      <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
-          Управление ставками
-        </a>
-      </li>
-      <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
-          Минусатор
-        </a>
-      </li>
-      <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
-          Чат для сайта
-        </a>
-      </li>
-    </ul>
 
-    <h4 class="sidebar__title">
-      Инструменты
-    </h4>
-    <ul class="sidebar__menu sidebar__menu--tools">
-      <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
-          Работа с семантическим ядром: удаление дубликатов
-        </a>
-      </li>
-      <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
-          Генератор UTM-меток
-        </a>
-      </li>
-    </ul>
 
-    <ul class="sidebar__menu sidebar__menu--bottom">
-      <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
-          Тарифы
-        </a>
-      </li>
-      <li class="sidebar__menu-item">
-        <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
-          Помощь
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div class="content">
+    <nav class="sidebar">
 
-  <div class="container">
+      <div class="sidebar__wrap profile-header__wrap">
+        <div class="profile-header__info">
+          <p class="profile-header__text">Аккаунт</p>
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+        </div>
+        <div class="balance">
+          <div class="balance__status">
+            <p class="profile-header__text">Баланс</p>
+            <span id="amount">0,00 ₽</span>
+          </div>
+          <div class="balance__button">
+            <a href="#" class="balance__link">Пополнить</a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sidebar__title">
+        Управление
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
+            Защита от скликивания
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
+            Управление ставками
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
+            Минусатор
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
+          </a>
+        </li>
+      </ul>
+
+      <h4 class="sidebar__title">
+        Инструменты
+      </h4>
+      <ul class="sidebar__menu sidebar__menu--tools">
+        <li class="sidebar__menu-item sidebar__menu-item--dublicate">
+          <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
+            Работа с семантическим ядром: удаление дубликатов
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--generator">
+          <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
+            Генератор UTM-меток
+          </a>
+        </li>
+      </ul>
+
+      <ul class="sidebar__menu sidebar__menu--bottom">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+            Тарифы
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--help">
+          <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+            Помощь
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <div class="company">
-      <h1 class="company__title">Мои кампании</h1>
-      <p class="company__description">
-        Выберите кампании, для которых вы хотите включить защиту.<br>
-        <b>Внимание!</b> Рекомендуем использовать защиту от скликивания в кампаниях, показы которых настроены на Москву
-        и МО, Санкт-Петербург, а также города с населением более 1 млн.
-        Не рекомендуем использовать защиту в кампаниях, показы которых настроены на города Дальнего Востока,
-        Калининград, а также на города с населением меньше 1 млн. Сервис автоматизированного управления ставками не
-        имеет географической привязанности.
-      </p>
       <div class="company__check">
         <div class="company-header__check">
           <label class="company-header__checkbox">
             <input type="checkbox" value="yes">
             <span class="company-header__checkmark"></span>
           </label>
-          <p class="company-header__title">Выбрать все</p>
+          <p class="company-header__title">Название</p>
+          <p class="company-header__title company-header__title--adaptive">Название/Cтатус</p>
         </div>
-        <div class="company-header__button-box">
-          <button class="company-header__button company-header__button--bid">Управление ставками</button>
-          <button class="company-header__button company-header__button--off">Отключить</button>
-          <button class="company-header__button company-header__button--on">Включить</button>
-        </div>
+        <p class="company-header__text">Статус</p>
       </div>
+
       <div class="company__info">
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--yes">
+                Защищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__stop">
+                Остановлена
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--yes">
+                Защищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--dynemic">
+                Кампания "Динамические объявления" №4
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--dynemic">
+                Кампания "Динамические объявления" №4
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="company__item">
+          <label class="company-item__checkbox">
+            <input type="checkbox" id="60893133" value="yes">
+            <span class="company-item__checkmark"></span>
+          </label>
+          <div class="company-item__wrap">
+            <div class="company-item__description">
+              <p class="company-item__title company-item__title--text-graph">
+                Текстово-графическая кампания №1
+              </p>
+              <p class="company-item__num">№ 12345678</p>
+            </div>
+
+            <div class="company-item__status">
+              <p class="company-status__active">
+                Активна
+              </p>
+              <p class="company-status__protect company-status__protect--no">
+                Незащищена
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="company__access"></div>
-      <div class="company__access-box">
-        <h3 class="company-access__title">Для продолжения предоставьте доступ к Яндекс.Директ</h3>
-        <p class="company-access__description">Это необходимо, чтобы мы с помощью Яндекс.Директ API могли получить
-          доступ к вашим рекламным кампаниям и автоматически управлять корректировками ставок.</p>
-        <button id="company-access" class="button company-access__button">Предоставить доступ</button>
+
+      <div class="company-control">
+        <div class="company-control__check">
+          <label class="company-control__checkbox">
+            <input class="company-control__input" type="checkbox">
+            <span class="company-control__checkmark"></span>
+          </label>
+          <p class="company-control__text">2 Кампании</p>
+        </div>
+
+        <div class="company-control__button-box">
+          <button class="company-control__btn company-control__btn--red" type="button">
+            Отключить <span>защиту</span> 
+          </button>
+          <button class="company-control__btn company-control__btn--green" type="button">
+            Включить <span>защиту</span>
+          </button>
+        </div>
       </div>
-      <h2 class="company__none">Список ваших кампаний пуст</h2>
     </div>
+
+
+    <div class="company__access"></div>
+    <div class="company__access-box">
+      <h3 class="company-access__title">Для продолжения предоставьте доступ к Яндекс.Директ</h3>
+      <p class="company-access__description">Это необходимо, чтобы мы с помощью Яндекс.Директ API могли получить
+        доступ к вашим рекламным кампаниям и автоматически управлять корректировками ставок.</p>
+      <button id="company-access" class="button company-access__button">Предоставить доступ</button>
+    </div>
+    <h2 class="company__none">Список ваших кампаний пуст</h2>
   </div>
-  </div>
+
   <div class="pop-up"></div>
+
+
+
 </body>
 
 </html>
