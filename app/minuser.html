@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>LifeClick - Минусатор</title>
+</head>
+
+<body>
+
+  <div class="profile-header">
+    <div class="profile-header__logo"></div>
+    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
+    <div class="profile-header__wrap">
+
+      <div class="balance">
+        <div class="balance__status">
+          <p class="profile-header__text">Баланс</p>
+          <span id="amount">0,00 ₽</span>
+        </div>
+        <div class="balance__button">
+          <a href="#" class="balance__link">Пополнить</a>
+        </div>
+      </div>
+      <div class="profile-header__info">
+        <p class="profile-header__text">Аккаунт</p>
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content__phrases">
+    <nav class="sidebar">
+
+      <div class="sidebar__wrap profile-header__wrap">
+        <div class="profile-header__info">
+          <p class="profile-header__text">Аккаунт</p>
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+        </div>
+        <div class="balance">
+          <div class="balance__status">
+            <p class="profile-header__text">Баланс</p>
+            <span id="amount">0,00 ₽</span>
+          </div>
+          <div class="balance__button">
+            <a href="#" class="balance__link">Пополнить</a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sidebar__title">
+        Управление
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
+            Защита от скликивания
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
+            Управление ставками
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
+            Минусатор
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
+          </a>
+        </li>
+      </ul>
+
+      <h4 class="sidebar__title">
+        Инструменты
+      </h4>
+      <ul class="sidebar__menu sidebar__menu--minuser">
+        <li class="sidebar__menu-item sidebar__menu-item--dublicate">
+          <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
+            Работа с семантическим ядром: удаление дубликатов
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--generator">
+          <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
+            Генератор UTM-меток
+          </a>
+        </li>
+      </ul>
+
+      <ul class="sidebar__menu sidebar__menu--bottom">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+            Тарифы
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--help">
+          <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+            Помощь
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="phrases minuser">
+
+      <div class="phrases__table">
+        <!-- Заголовок таблицы -->
+        <ul class="phrases__head phrases__minuser">
+          <li class="phrases__head-item phrases__head-item--all phrases__head-item--minuser">
+            <label class="phrases__head-checkbox phrases__label phrases__label--minuser">
+              <input class="phrases__input phrases__input-all" type="checkbox">
+              Название<span class="minuser__text">/Фраза</span>
+              <span class="phrases__check phrases__check--all phrases__check--minuser"></span>
+            </label>
+          </li>
+        </ul><!-- Конец Заголовка таблицы -->
+
+        <!-- ================ Начало таблицы чекбоксов ================ -->
+        <ul class="phrases__list">
+
+          <!-- ================ Главный чекбокс ================ -->
+          <li class="phrases__campany">
+            <label class="phrases__checkbox phrases__label">
+              <input class="phrases__input" type="checkbox" value="" name="">
+              <span class="phrases__check"></span>
+            </label>
+
+            <div class="phrases__checkbox-info">
+              <h3 class="phrases__checkbox-title">
+                <span class="phrases__checkbox-name">
+                  Текстово-графическая кампания №1
+                </span>
+                <span class="phrases__checkbox-plus"></span>
+              </h3>
+              <span class="phrases__checkbox-number">
+                № 12345678
+              </span>
+            </div>
+            <!-- ================ Вложенные чекбоксы ================ -->
+            <ul class="phrases__items">
+
+              <li class="phrases__item phrases__item-minuser">
+                <div class="phrases__item-wrapper">
+                  <label class="phrases__item-checkbox phrases__label">
+                    <input class="phrases__input" type="checkbox" value="" name="">
+                    <span class="phrases__check"></span>
+                  </label>
+                  <span class="phrases__item-name">Защита от скликивания</span>
+                  <span class="phrases__item-number">№ 12345678901</span>
+                </div>
+              </li>
+            </ul><!-- Конец вложенных чекбоксов -->
+
+          </li> <!-- Конец главного чекбоксa -->
+
+          <li class="phrases__campany">
+            <label class="phrases__checkbox phrases__label">
+              <input class="phrases__input" type="checkbox" value="" name="">
+              <span class="phrases__check"></span>
+            </label>
+
+            <div class="phrases__checkbox-info">
+              <h3 class="phrases__checkbox-title">
+                <span class="phrases__checkbox-name">
+                  Текстово-графическая кампания №2
+                </span>
+                <span class="phrases__checkbox-plus"></span>
+              </h3>
+              <span class="phrases__checkbox-number">
+                № 12345678
+              </span>
+            </div>
+            <!-- ================ Вложенные чекбоксы ================ -->
+            <ul class="phrases__items">
+
+              <li class="phrases__item phrases__item-minuser">
+                <div class="phrases__item-wrapper">
+                  <label class="phrases__item-checkbox phrases__label">
+                    <input class="phrases__input" type="checkbox" value="" name="">
+                    <span class="phrases__check"></span>
+                  </label>
+                  <span class="phrases__item-name">Защита от скликивания</span>
+                  <span class="phrases__item-number">№ 12345678901</span>
+                </div>
+              </li>
+            </ul><!-- Конец вложенных чекбоксов -->
+
+          </li> <!-- Конец главного чекбоксa -->
+
+          <li class="phrases__campany">
+            <label class="phrases__checkbox phrases__label">
+              <input class="phrases__input" type="checkbox" value="" name="">
+              <span class="phrases__check"></span>
+            </label>
+
+            <div class="phrases__checkbox-info">
+              <h3 class="phrases__checkbox-title">
+                <span class="phrases__checkbox-name">
+                  Текстово-графическая кампания №3
+                </span>
+                <span class="phrases__checkbox-plus"></span>
+              </h3>
+              <span class="phrases__checkbox-number">
+                № 12345678
+              </span>
+            </div>
+            <!-- ================ Вложенные чекбоксы ================ -->
+            <ul class="phrases__items">
+
+              <li class="phrases__item phrases__item-minuser">
+                <div class="phrases__item-wrapper">
+                  <label class="phrases__item-checkbox phrases__label">
+                    <input class="phrases__input" type="checkbox" value="" name="">
+                    <span class="phrases__check"></span>
+                  </label>
+                  <span class="phrases__item-name">Защита от скликивания</span>
+                  <span class="phrases__item-number">№ 12345678901</span>
+                </div>
+              </li>
+            </ul><!-- Конец вложенных чекбоксов -->
+
+          </li> <!-- Конец главного чекбоксa -->
+
+        </ul><!-- Конец таблицы чекбоксов -->
+
+        <div class="company-control">
+          <div class="company-control__check">
+            <label class="company-control__checkbox">
+              <input class="company-control__input" type="checkbox">
+              <span class="company-control__checkmark"></span>
+            </label>
+            <div class="company-control__text">
+              1 фраза
+            </div>
+          </div>
+
+          <div class="company-control__button-box">
+            <button class="company-control__btn company-control__btn--green btn--menager" type="button">
+              Добавить в минус-фразы
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <h2 class="company__none">Список ваших кампаний пуст</h2>
+    </div>
+  </div>
+
+</body>
+
+</html>
