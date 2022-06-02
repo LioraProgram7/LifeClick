@@ -18,7 +18,26 @@ $email = $_COOKIE['email'];
   <meta name="description" content="Выбор кампаний, для которых вы хотите включить защиту" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://w.tb.ru/open-messenger/widget?wId=W-99ED40DAD6EE41B49E42666C07CA47BC"></script>
+  <!-- Carrot quest BEGIN -->
+  <script type="text/javascript">
+    ! function () {
+      function t(t, e) {
+        return function () {
+          window.carrotquestasync.push(t, arguments)
+        }
+      }
+      if ("undefined" == typeof carrotquest) {
+        var e = document.createElement("script");
+        e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
+          .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
+          carrotquest.settings = {};
+        for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
+            "trackMessageInteraction"
+          ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
+      }
+    }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+  </script>
+  <!-- Carrot quest END -->
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/script.min.js"></script>
   <script src="js/account-menu.min.js"></script>

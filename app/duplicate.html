@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>LifeClick - Удаление дубликатов</title>
+</head>
+
+<body>
+
+  <div class="profile-header">
+    <div class="profile-header__logo"></div>
+    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
+    <div class="profile-header__wrap">
+
+      <div class="balance">
+        <div class="balance__status">
+          <p class="profile-header__text">Баланс</p>
+          <span id="amount">0,00 ₽</span>
+        </div>
+        <div class="balance__button">
+          <a href="#" class="balance__link">Пополнить</a>
+        </div>
+      </div>
+      <div class="profile-header__info">
+        <p class="profile-header__text">Аккаунт</p>
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content__dublicate">
+    <nav class="sidebar">
+
+      <div class="sidebar__wrap profile-header__wrap">
+        <div class="profile-header__info">
+          <p class="profile-header__text">Аккаунт</p>
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+        </div>
+        <div class="balance">
+          <div class="balance__status">
+            <p class="profile-header__text">Баланс</p>
+            <span id="amount">0,00 ₽</span>
+          </div>
+          <div class="balance__button">
+            <a href="#" class="balance__link">Пополнить</a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sidebar__title">
+        Управление
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
+            Защита от скликивания
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
+            Управление ставками
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
+            Минусатор
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
+          </a>
+        </li>
+      </ul>
+
+      <h4 class="sidebar__title">
+        Инструменты
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item sidebar__menu-item--dublicate">
+          <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
+            Работа с семантическим ядром: удаление дубликатов
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--generator">
+          <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
+            Генератор UTM-меток
+          </a>
+        </li>
+      </ul>
+
+      <ul class="sidebar__menu sidebar__menu--bottom">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+            Тарифы
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--help">
+          <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+            Помощь
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+    <!-- вариант 1 -->
+    <div class="duplicate">
+      <div class="duplicate__table">
+        <div class="duplicate__wrapper">
+
+          <ul class="duplicate__head">
+            <li class="duplicate__item">
+              <p class="duplicate__title">
+                Ключевые фразы
+              </p>
+            </li>
+            <li class="duplicate__item">
+              <p class="duplicate__title">
+                Ключевые фразы*
+              </p>
+            </li>
+            <li class="duplicate__item">
+              <p class="duplicate__title">
+                Удаленные ключевые фразы
+              </p>
+            </li>
+            <li class="duplicate__item">
+              <p class="duplicate__title">
+                Отфильтрованные ключевые фразы
+              </p>
+            </li>
+            <li class="duplicate__item duplicate__item--left">
+              <p class="duplicate__title">
+                Уникальные ключевые фразы
+              </p>
+            </li>
+          </ul>
+
+          <div class="duplicate__box">
+            <ul class="duplicate__content">
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, защита от скликивания, защита, скликивание,
+                  бид-менеджер,
+                  менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер, защита от скликивания
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  менеджер
+                </p>
+              </li>
+
+
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, защита от скликивания, защита, скликивание,
+                  бид-менеджер,
+                  менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер, защита от скликивания
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  менеджер
+                </p>
+              </li>
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, защита от скликивания, защита, скликивание,
+                  бид-менеджер,
+                  менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер, защита от скликивания
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, защита от скликивания, защита, скликивание,
+                  бид-менеджер,
+                  менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер, защита от скликивания
+                </p>
+              </li>
+
+              <li class="duplicate__list">
+                <p class="duplicate__text">
+                  менеджер
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="company-control">
+            <div class="company-control__check">
+              <label class="company-control__checkbox">
+                <input class="company-control__input" type="checkbox">
+                <span class="company-control__checkmark"></span>
+              </label>
+              <p class="company-control__text">2 Кампании</p>
+            </div>
+
+            <div class="company-control__button-box">
+              <button class="company-control__btn company-control__btn--red" type="button">
+                Отключить <span>защиту</span>
+              </button>
+              <button class="company-control__btn company-control__btn--green" type="button">
+                Включить <span>защиту</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <!-- второй вариант -->
+
+    <!-- <div class="duplicate">
+      <ul class="duplicate__table">
+        <li class="duplicate__column">
+          <div class="duplicate__head">
+            <p class="duplicate__title">
+              Ключевые фразы
+            </p>
+          </div>
+          <div class="duplicate__content">
+            <p class="duplicate__text">
+              Защита от скликивания, защита, скликивание, бид-менеджер, защита от скликивания, защита, скликивание,
+              бид-менеджер,
+              менеджер
+            </p>
+          </div>
+        </li>
+
+        <li class="duplicate__column">
+          <div class="duplicate__head">
+            <p class="duplicate__title">
+              Ключевые фразы*
+            </p>
+          </div>
+          <div class="duplicate__content">
+            <p class="duplicate__text">
+              Защита от скликивания, защита, скликивание
+            </p>
+          </div>
+        </li>
+
+        <li class="duplicate__column">
+          <div class="duplicate__head">
+            <p class="duplicate__title">
+              Удаленные ключевые фразы
+            </p>
+          </div>
+          <div class="duplicate__content">
+            <p class="duplicate__text">
+              Защита от скликивания, защита, скликивание, бид-менеджер, менеджер
+            </p>
+          </div>
+        </li>
+
+        <li class="duplicate__column">
+          <div class="duplicate__head">
+            <p class="duplicate__title">
+              Отфильтрованные ключевые фразы
+            </p>
+          </div>
+          <div class="duplicate__content">
+            <p class="duplicate__text">
+              Защита от скликивания, защита, скликивание, бид-менеджер, менеджер, защита от скликивания
+            </p>
+          </div>
+        </li>
+
+        <li class="duplicate__column">
+          <div class="duplicate__head">
+            <p class="duplicate__title">
+              Уникальные ключевые фразы
+            </p>
+          </div>
+          <div class="duplicate__content">
+            <p class="duplicate__text">
+              менеджер
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div> -->
+
+  </div>
+
+</body>
+
+</html>

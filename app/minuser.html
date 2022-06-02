@@ -6,6 +6,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
+  <!-- Carrot quest BEGIN -->
+  <script type="text/javascript">
+    ! function () {
+      function t(t, e) {
+        return function () {
+          window.carrotquestasync.push(t, arguments)
+        }
+      }
+      if ("undefined" == typeof carrotquest) {
+        var e = document.createElement("script");
+        e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
+          .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
+          carrotquest.settings = {};
+        for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
+            "trackMessageInteraction"
+          ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
+      }
+    }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+  </script>
+  <!-- Carrot quest END -->
   <title>LifeClick - Минусатор</title>
 </head>
 

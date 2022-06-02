@@ -18,7 +18,26 @@ $email = $_COOKIE['email'];
   <meta name="description" content="Изменение настроек аккаунта" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://w.tb.ru/open-messenger/widget?wId=W-99ED40DAD6EE41B49E42666C07CA47BC"></script>
+  <!-- Carrot quest BEGIN -->
+  <script type="text/javascript">
+    ! function () {
+      function t(t, e) {
+        return function () {
+          window.carrotquestasync.push(t, arguments)
+        }
+      }
+      if ("undefined" == typeof carrotquest) {
+        var e = document.createElement("script");
+        e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
+          .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
+          carrotquest.settings = {};
+        for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
+            "trackMessageInteraction"
+          ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
+      }
+    }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+  </script>
+  <!-- Carrot quest END -->
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/script.min.js"></script>
   <script src="js/account-edit.min.js"></script>
@@ -49,7 +68,7 @@ $email = $_COOKIE['email'];
   </div>
 
   <div class="content">
-    
+
     <nav class="sidebar">
       <div class="sidebar__wrap profile-header__wrap">
         <div class="profile-header__info">
@@ -148,17 +167,19 @@ $email = $_COOKIE['email'];
         <button id="button-exit" class="button profile-info__button profile-info__button--exit">Выход из
           аккаунта</button>
       </div>
+
+      <div class="company__access"></div>
+      <div class="company__access-box">
+        <h3 class="company-access__title">Отвязка Яндекс аккаунта</h3>
+        <p class="company-access__description">При отвязке аккаунта, защита со всех ваших кампаний будет снята</p>
+        <button id="rate-cancel" class="button company-access__rate company-access__rate--cancel">Отмена</button>
+        <button id="rate-ok" class="button company-access__rate company-access__rate--ok">Подтверждение</button>
+      </div>
     </div>
+
+    <div class="pop-up"></div>
   </div>
 
-  <div class="company__access"></div>
-  <div class="company__access-box">
-    <h3 class="company-access__title">Отвязка Яндекс аккаунта</h3>
-    <p class="company-access__description">При отвязке аккаунта, защита со всех ваших кампаний будет снята</p>
-    <button id="rate-cancel" class="button company-access__rate company-access__rate--cancel">Отмена</button>
-    <button id="rate-ok" class="button company-access__rate company-access__rate--ok">Подтверждение</button>
-  </div>
-  <div class="pop-up"></div>
 </body>
 
 </html>
