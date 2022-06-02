@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>LifeClick - Помощь</title>
+</head>
+
+<body>
+
+  <div class="profile-header">
+    <div class="profile-header__logo"></div>
+    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
+    <div class="profile-header__wrap">
+
+      <div class="balance">
+        <div class="balance__status">
+          <p class="profile-header__text">Баланс</p>
+          <span id="amount">0,00 ₽</span>
+        </div>
+        <div class="balance__button">
+          <a href="#" class="balance__link">Пополнить</a>
+        </div>
+      </div>
+      <div class="profile-header__info">
+        <p class="profile-header__text">Аккаунт</p>
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <nav class="sidebar">
+
+      <div class="sidebar__wrap profile-header__wrap">
+        <div class="profile-header__info">
+          <p class="profile-header__text">Аккаунт</p>
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+        </div>
+        <div class="balance">
+          <div class="balance__status">
+            <p class="profile-header__text">Баланс</p>
+            <span id="amount">0,00 ₽</span>
+          </div>
+          <div class="balance__button">
+            <a href="#" class="balance__link">Пополнить</a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sidebar__title">
+        Управление
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
+            Защита от скликивания
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
+            Управление ставками
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
+            Минусатор
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
+          </a>
+        </li>
+      </ul>
+
+      <h4 class="sidebar__title">
+        Инструменты
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item sidebar__menu-item--dublicate">
+          <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
+            Работа с семантическим ядром: удаление дубликатов
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--generator">
+          <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
+            Генератор UTM-меток
+          </a>
+        </li>
+      </ul>
+
+      <ul class="sidebar__menu sidebar__menu--bottom">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+            Тарифы
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--help">
+          <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+            Помощь
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="help">
+      <div class="help__content">
+        <div class="help__title">
+          <h3 class="help__title-text">
+            Пример открытого заголовока
+          </h3>
+          <button class="help__btn help__btn--one" type="button"></button>
+        </div>
+        <div class="help__subtitle help__subtitle--one">
+          <p class="help__subtitle-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut varius justo. Nulla id neque luctus,
+            gravida neque eu, pellentesque nisl. Quisque ac metus accumsan, eleifend risus non, fermentum neque. Nulla
+            ultricies nunc vel ultricies eleifend. Duis in viverra ipsum. Vestibulum maximus tellus ut lectus pretium,
+            eu finibus lectus sollicitudin. Ut sed porta purus. Nulla luctus dignissim sapien id rutrum. Sed a magna
+            nibh. Aliquam feugiat, mi in volutpat tempor, nibh nisi efficitur turpis, quis tincidunt purus lacus ac
+            tortor. Fusce ex lacus, sodales sit amet magna nec, venenatis pulvinar elit. Donec posuere at lorem in
+            laoreet. Vivamus imperdiet cursus turpis at mollis. Phasellus accumsan laoreet orci sed faucibus. Vivamus
+            sed laoreet ante, vel ornare massa. Suspendisse et sapien nec metus ultrices ultrices.
+          </p>
+        </div>
+      </div>
+
+      <div class="help__content">
+        <div class="help__title">
+          <h3 class="help__title-text">
+            Пример открытого заголовока
+          </h3>
+          <button class="help__btn help__btn--two" type="button"></button>
+        </div>
+        <div class="help__subtitle help__subtitle--two">
+          <p class="help__subtitle-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut varius justo. Nulla id neque luctus,
+            gravida neque eu, pellentesque nisl. Quisque ac metus accumsan, eleifend risus non, fermentum neque. Nulla
+            ultricies nunc vel ultricies eleifend. Duis in viverra ipsum. Vestibulum maximus tellus ut lectus pretium,
+            eu finibus lectus sollicitudin. Ut sed porta purus. Nulla luctus dignissim sapien id rutrum. Sed a magna
+            nibh. Aliquam feugiat, mi in volutpat tempor, nibh nisi efficitur turpis, quis tincidunt purus lacus ac
+            tortor. Fusce ex lacus, sodales sit amet magna nec, venenatis pulvinar elit. Donec posuere at lorem in
+            laoreet. Vivamus imperdiet cursus turpis at mollis. Phasellus accumsan laoreet orci sed faucibus. Vivamus
+            sed laoreet ante, vel ornare massa. Suspendisse et sapien nec metus ultrices ultrices.
+          </p>
+        </div>
+      </div>
+
+      <div class="help__content">
+        <div class="help__title">
+          <h3 class="help__title-text">
+            Пример закрытого заголовока
+          </h3>
+          <button class="help__btn help__btn--three" type="button"></button>
+        </div>
+        <div class="help__subtitle help__subtitle--three">
+          <p class="help__subtitle-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut varius justo. Nulla id neque luctus,
+            gravida neque eu, pellentesque nisl. Quisque ac metus accumsan, eleifend risus non, fermentum neque. Nulla
+            ultricies nunc vel ultricies eleifend. Duis in viverra ipsum. Vestibulum maximus tellus ut lectus pretium,
+            eu finibus lectus sollicitudin. Ut sed porta purus. Nulla luctus dignissim sapien id rutrum. Sed a magna
+            nibh. Aliquam feugiat, mi in volutpat tempor, nibh nisi efficitur turpis, quis tincidunt purus lacus ac
+            tortor. Fusce ex lacus, sodales sit amet magna nec, venenatis pulvinar elit. Donec posuere at lorem in
+            laoreet. Vivamus imperdiet cursus turpis at mollis. Phasellus accumsan laoreet orci sed faucibus. Vivamus
+            sed laoreet ante, vel ornare massa. Suspendisse et sapien nec metus ultrices ultrices.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,14 +1,19 @@
 $(function () {
 
-    $('.phrases__checkbox-plus').on('click', function () {
-      $(this.parentElement.parentElement).toggleClass('active');
-      $(this).toggleClass('active');
-    });
+$('.help__subtitle').slideToggle();
+  $('.help__btn--one').on('click', function () {
+    $('.help__subtitle--one').slideToggle();
+    $(this).toggleClass('transform');
+  });
 
+  $('.help__btn--two').on('click', function () {
+    $('.help__subtitle--two').slideToggle();
+    $(this).toggleClass('transform');
+  });
 
-    // Изменила поведение кнопки
-    $('#securityBtn').on('click', function () {
-      $('.header__security-list').slideToggle();
-    });
+  $('.help__btn--three').on('click', function () {
+    $('.help__subtitle--three').slideToggle();
+    $(this).toggleClass('transform');
+  });
 
 });
