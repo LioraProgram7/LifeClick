@@ -6052,7 +6052,6 @@ p {
   }
 }
 
-
 .development__inner {
   display: flex;
   flex-direction: column;
@@ -6188,72 +6187,6 @@ p {
   }
 }
 
-// вариант 2
-// .duplicate {
-//   padding: 105px 30px 0 205px;
-// }
-
-// .duplicate__table {
-//   display: flex;
-//   justify-content: space-between;
-//   height: calc(100vh - 110px);
-//   border: 2px solid #CFCFCF;
-//   border-radius: 15px;
-//   margin: 0;
-//   padding: 0;
-//   position: relative;
-// }
-
-// .duplicate__table::after {
-//   content: "";
-//   position: absolute;
-//   width: 100%;
-//   height: 2px;
-//   background-color: #cfcfcf;
-//   top: 58px;
-//   left: 0;
-// }
-
-// .duplicate__column {
-//   // display: flex;
-//   // flex-direction: column;
-//   width: 100%;
-//   list-style: none;
-//   color: #000000;
-//   line-height: 21px;
-// }
-
-// .duplicate__column:not(:last-child) {
-//   border-right: 2px solid #CFCFCF;
-// }
-
-// .duplicate__head {
-//   display: flex;
-//   justify-content: center;
-//   max-width: 226px;
-//   width: 100%;
-//   height: 62px;
-//   text-align: center;
-//   align-items: center;
-// }
-
-// .duplicate__title {
-//   max-width: 170px;
-//   width: 100%;
-// }
-
-// .duplicate__content {
-//   overflow-y: scroll;
-// }
-
-// .duplicate__text {
-//   width: 211px;
-//   padding: 10px;
-// }
-
-
-// вариант1
-
 .duplicate {
   padding: 105px 30px 0 205px;
 }
@@ -6261,6 +6194,14 @@ p {
 @media (max-width: 774px) {
   .duplicate {
     padding: 88px 15px 0 15px;
+  }
+}
+
+@media (max-width: 910px) {
+  .duplicate {
+    .company-control__text {
+      width: 80px;
+    }
   }
 }
 
@@ -6275,7 +6216,7 @@ p {
 .duplicate__table::-webkit-scrollbar {
   width: 4px;
   border-radius: 23px;
-background-color: #fff;
+  background-color: #fff;
 }
 
 .duplicate__table::-webkit-scrollbar-track {
@@ -6478,7 +6419,7 @@ background-color: #fff;
 @media (max-width: 774px) {
   .duplicate {
     .company-control__btn {
-      width: 120px;
+      width: 115px;
     }
   }
 }
@@ -6486,7 +6427,6 @@ background-color: #fff;
 .company-control__button-box {
   display: flex;
 }
-
 
 
 .help {
@@ -6511,7 +6451,14 @@ background-color: #fff;
   padding-right: 10px;
 }
 
-.help__title-text {
+.help__btn {
+  border: none;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  cursor: pointer;
+  font-family: "Roboto",
+    sans-serif;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
@@ -6522,18 +6469,10 @@ background-color: #fff;
 }
 
 @media (max-width: 774px) {
-  .help__title-text {
+  .help__btn {
     font-size: 18px;
     line-height: 21px;
   }
-}
-
-.help__btn {
-  border: none;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0);
-  position: relative;
-  cursor: pointer;
 }
 
 .help__btn::before {
@@ -6543,13 +6482,13 @@ background-color: #fff;
   width: 16px;
   height: 10px;
   top: 9px;
-  left: 6px;
+  right: -22px;
 }
 
 @media (max-width: 774px) {
   .help__btn::before {
-    top: 4px;
-    left: 4px;
+    top: 3px;
+    right: -19px;
   }
 }
 

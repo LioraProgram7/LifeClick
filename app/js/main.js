@@ -1,6 +1,7 @@
 $(function () {
 
-$('.help__subtitle').slideToggle();
+  // для страницы help
+  $('.help__subtitle').slideToggle();
   $('.help__btn--one').on('click', function () {
     $('.help__subtitle--one').slideToggle();
     $(this).toggleClass('transform');
