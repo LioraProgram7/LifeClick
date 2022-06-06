@@ -4867,6 +4867,12 @@ p {
   right: 383px;
 }
 
+@media (max-width: 1440px) {
+  .phrases__table::before {
+    right: 253px;
+  }
+}
+
 .phrases-line {
   position: relative;
 }
@@ -4891,6 +4897,17 @@ p {
   right: 502px;
   z-index: 1;
 }
+
+@media (max-width: 1440px) {
+  .phrases-line::after {
+    right: 115px;
+  }
+
+  .phrases-line::before {
+    right: 345px;
+  }
+}
+
 
 .phrases-lines {
   position: relative;
@@ -4918,6 +4935,16 @@ p {
   z-index: 1;
 }
 
+@media (max-width: 1440px) {
+  .phrases-lines::before {
+    right: 417px;
+  }
+
+  .phrases-lines::after {
+    right: 493px;
+  }
+}
+
 .phrases__head {
   list-style: none;
   -webkit-box-align: center;
@@ -4937,11 +4964,18 @@ p {
   color: #000000;
 }
 
+@media (max-width: 1440px) {
+  .phrases__head {
+    // grid-template-columns: auto 75px 59px 89px 130px 80px;
+    grid-template-columns: auto 67px 59px 82px 130px 89px;
+  }
+}
+
 .phrases__labelAdaptive {
   display: none;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1000px) {
 
   .phrases__head-item--desctop,
   .phrases__head-item--all {
@@ -4976,6 +5010,12 @@ p {
 
 .phrases__head-item--status {
   transform: translateX(48px);
+}
+
+@media (max-width: 1440px) {
+  .phrases__head-item--status {
+    transform: translateX(0);
+  }
 }
 
 @media (max-width: 700px) {
@@ -5073,6 +5113,12 @@ p {
   .phrases__check--all {
     height: 26px;
     width: 26px;
+    left: -3px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .phrases__check--all {
     top: 12px;
     left: 13px;
   }
@@ -5135,6 +5181,12 @@ p {
   margin-bottom: 20px;
 }
 
+@media (max-width: 1030px) {
+  .phrases__checkbox-info {
+    margin-left: 45px;
+  }
+}
+
 @media (max-width: 700px) {
   .phrases__checkbox-info {
     margin-left: 47px;
@@ -5175,6 +5227,24 @@ p {
   font-size: 18px;
   line-height: 1.16;
   position: relative;
+}
+
+@media (max-width: 1170px) {
+  .phrases__checkbox-name {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .phrases__checkbox-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .phrases__checkbox-name {
+    width: 100%;
+  }
 }
 
 .phrases__checkbox-name::after {
@@ -5267,7 +5337,8 @@ p {
 }
 
 .phrases__items {
-  display: none;
+  // display: none;
+  display: block;
   list-style: none;
   margin: 0;
   margin-left: 76px;
@@ -5296,6 +5367,13 @@ p {
   transition: background-color 0.5s;
   justify-items: center;
   grid-template-areas: "head place bids predict price";
+}
+
+@media (max-width: 1440px) {
+  .phrases__item {
+    // grid-template-columns: auto 55px 70px 90px 110px 80px;
+    grid-template-columns: auto 75px 52px 89px 130px 89px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -6034,16 +6112,14 @@ p {
   }
 }
 
+.content__development {
+  display: block;
+}
+
 .development {
   display: flex;
   height: 100vh;
   align-items: center;
-}
-
-@media (max-height: 800px) {
-  .development {
-    height: 115vh;
-  }
 }
 
 @media (max-height: 440px) {
