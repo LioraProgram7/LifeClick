@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>LifeClick - Генератор UTM-меток</title>
+</head>
+
+<body>
+
+  <div class="profile-header">
+    <div class="profile-header__logo"></div>
+    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
+    <div class="profile-header__wrap">
+
+      <div class="balance">
+        <div class="balance__status">
+          <p class="profile-header__text">Баланс</p>
+          <span id="amount">0,00 ₽</span>
+        </div>
+        <div class="balance__button">
+          <a href="#" class="balance__link">Пополнить</a>
+        </div>
+      </div>
+      <div class="profile-header__info">
+        <p class="profile-header__text">Аккаунт</p>
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="content__generator">
+    <nav class="sidebar">
+
+      <div class="sidebar__wrap profile-header__wrap">
+        <div class="profile-header__info">
+          <p class="profile-header__text">Аккаунт</p>
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+        </div>
+        <div class="balance">
+          <div class="balance__status">
+            <p class="profile-header__text">Баланс</p>
+            <span id="amount">0,00 ₽</span>
+          </div>
+          <div class="balance__button">
+            <a href="#" class="balance__link">Пополнить</a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sidebar__title">
+        Управление
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
+            Защита от скликивания
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
+            Управление ставками
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
+            Минусатор
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
+          </a>
+        </li>
+      </ul>
+
+      <h4 class="sidebar__title">
+        Инструменты
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item sidebar__menu-item--dublicate">
+          <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
+            Работа с семантическим ядром: удаление дубликатов
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--generator">
+          <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
+            Генератор UTM-меток
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--minuser">
+          <a class="sidebar__menu-link sidebar__menu-link--minuser" href="#">
+            РСЯ минусатор площадок
+          </a>
+        </li>
+      </ul>
+
+      <ul class="sidebar__menu sidebar__menu--bottom">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+            Тарифы
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--help">
+          <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+            Помощь
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="generator">
+      <form class="generator__address" action="#">
+        <h4 class="generator__title generator__address-title">
+          Адрес вашей страницы
+        </h4>
+        <input class="generator__address-input" type="text" placeholder="https://lifeclick.ru" required>
+      </form>
+
+
+      <div class="generator__traffic">
+        <h4 class="generator__title generator__traffic-title">
+          Источник трафика
+        </h4>
+        <form class="generator__traffic-form" action="#">
+          <label class="generator__traffic-label">
+            <input class="generator__traffic-input" type="checkbox">
+            <span class="generator__traffic-checkbox"></span>
+            <span class="generator__traffic-text">
+              Свои значения
+            </span>
+          </label>
+
+          <label class="generator__traffic-label">
+            <input class="generator__traffic-input" type="checkbox">
+            <span class="generator__traffic-checkbox"></span>
+            <span class="generator__traffic-text">
+              Яндес.Директ
+            </span>
+          </label>
+
+          <label class="generator__traffic-label">
+            <input class="generator__traffic-input" type="checkbox">
+            <span class="generator__traffic-checkbox"></span>
+            <span class="generator__traffic-text">
+              Вконтакте
+            </span>
+          </label>
+
+          <label class="generator__traffic-label">
+            <input class="generator__traffic-input" type="checkbox">
+            <span class="generator__traffic-checkbox"></span>
+            <span class="generator__traffic-text">
+              Target My.com
+            </span>
+          </label>
+        </form>
+      </div>
+
+
+      <div class="generator__options">
+        <div class="generator__obligatory">
+          <h4 class="generator__title">
+            Обязательные параметры
+          </h4>
+          <form class="generator__obligatory-form" action="#">
+            <label class="generator__obligatory-label" for="source">
+              Источник кампании
+            </label>
+            <span class="generator__obligatory-btn">
+              utm_source
+            </span>
+            <input class="generator__obligatory-input" type="text" name="companySource" id="source"
+              placeholder="google, yandex, vk, facebook" required>
+          </form>
+
+          <form class="generator__obligatory-form" action="#">
+            <label class="generator__obligatory-label" for="source">
+              Тип трафика
+            </label>
+            <span class="generator__obligatory-btn">
+              utm_medium
+            </span>
+            <input class="generator__obligatory-input" type="text" name="companySource" id="source"
+              placeholder="cpc, email, banner, article" required>
+          </form>
+
+          <form class="generator__obligatory-form" action="#">
+            <label class="generator__obligatory-label" for="source">
+              Название кампании
+            </label>
+            <span class="generator__obligatory-btn">
+              utm_campaign
+            </span>
+            <input class="generator__obligatory-input" type="text" name="companySource" id="source"
+              placeholder="promo, discount, sale" required>
+          </form>
+        </div>
+
+        <div class="generator__optional">
+          <h4 class="generator__title">
+            Необязательные параметры
+          </h4>
+          <form class="generator__obligatory-form" action="#">
+            <label class="generator__obligatory-label" for="source">
+              Идентификатор объявления
+            </label>
+            <span class="generator__obligatory-btn">
+              utm_content
+            </span>
+            <input class="generator__obligatory-input" type="text" name="companySource" id="source"
+              placeholder="link, landing page">
+          </form>
+
+          <form class="generator__obligatory-form" action="#">
+            <label class="generator__obligatory-label" for="source">
+              Ключевое слово
+            </label>
+            <span class="generator__obligatory-btn">
+              utm_term
+            </span>
+            <input class="generator__obligatory-input" type="text" name="companySource" id="source"
+              placeholder="shop, sale">
+          </form>
+        </div>
+      </div>
+
+      <div class="generator__result">
+        <h4 class="generator__title generator__result-title">
+          Результат
+        </h4>
+        <button class="generator__result-btn">Копировать</button>
+        <input class="generator__resul-input" type="text" placeholder="Здесь появиться результат..">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
