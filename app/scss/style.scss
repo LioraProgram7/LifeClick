@@ -4917,7 +4917,7 @@ p {
   background-color: #CFCFCF;
   top: 0;
   right: 502px;
-  z-index: 1;
+  // z-index: 1;
 }
 
 @media (max-width: 1440px) {
@@ -4943,7 +4943,7 @@ p {
   background-color: #CFCFCF;
   top: 0;
   right: 733px;
-  z-index: 1;
+  // z-index: 1;
 }
 
 .phrases-lines::before {
@@ -4954,7 +4954,7 @@ p {
   background-color: #CFCFCF;
   top: 0;
   right: 614px;
-  z-index: 1;
+  // z-index: 1;
 }
 
 @media (max-width: 1440px) {
@@ -6086,10 +6086,6 @@ p {
 
   .company-control__check {
     margin-left: 13px;
-  }
-
-  .company-control__checkmark {
-    top: -6px;
   }
 
   .company-control__text {
