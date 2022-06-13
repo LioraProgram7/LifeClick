@@ -2290,6 +2290,8 @@ p {
   margin: 0 auto;
   margin-top: 238px;
   text-align: center;
+  position: relative;
+  z-index: 5;
 }
 
 .company-item__wrap {
