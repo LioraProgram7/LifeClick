@@ -134,12 +134,12 @@ p {
   margin-bottom: 30px;
 }
 
- .pop-up__text {
-   font-family: 'Roboto';
-   font-weight: 400;
-   font-size: 18px;
-   line-height: 21px;
- }
+.pop-up__text {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
 
 
 .container-title.title-bid {
@@ -1473,7 +1473,7 @@ p {
   justify-content: flex-end;
   text-align: right;
   align-items: center;
-  z-index: 5;
+  z-index: 10;
 }
 
 @media (max-width: 774px) {
@@ -5950,7 +5950,7 @@ p {
   border-radius: 15px;
   align-items: center;
   margin-bottom: 31px;
-  z-index: 2;
+  z-index: 6;
   bottom: -31px;
 }
 
@@ -6504,6 +6504,23 @@ p {
   }
 }
 
+.duplicate__textarea {
+  height: calc(100vh - 131px - 62px);
+  resize: none;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.duplicate__textarea::placeholder {
+  color: #000000;
+}
+
 .company-control__text--duplicate {
   padding-left: 0;
 }
@@ -6672,13 +6689,18 @@ p {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: #cfcfcf;
   border: 2px solid #cfcfcf;
   border-radius: 15px;
 
   &:focus {
     outline: 1px solid #cfcfcf;
   }
+}
+
+.generator__address-input::placeholder,
+.generator__obligatory-input::placeholder,
+.generator__resul-input::placeholder {
+  color: #cfcfcf;
 }
 
 .generator__address-input {
@@ -6950,5 +6972,3 @@ p {
     padding: 10px 20px 10px 100px;
   }
 }
-
-
