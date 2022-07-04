@@ -50,7 +50,7 @@ $email = $_COOKIE['email'];
   <script src="js/script.min.js"></script>
   <script src="js/account-menu.min.js"></script>
   <script src="js/balance.min.js"></script>
-  <title>LifeClick - Тарифы</title>
+  <title>LifeClick - Профиль</title>
 </head>
 
 <body>
@@ -70,19 +70,19 @@ $email = $_COOKIE['email'];
       </div>
       <div class="profile-header__info">
         <p class="profile-header__text">Аккаунт</p>
-        <a href="#" class="profile-header__account"><?php echo $email ?></a>
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
       </div>
     </div>
   </div>
 
 
-  <div class="content__account__balance">
+  <div class="content">
     <nav class="sidebar">
 
       <div class="sidebar__wrap profile-header__wrap">
         <div class="profile-header__info">
           <p class="profile-header__text">Аккаунт</p>
-          <a href="#" class="profile-header__account"><?php echo $email ?></a>
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
         </div>
         <div class="balance">
           <div class="balance__status">
@@ -124,7 +124,7 @@ $email = $_COOKIE['email'];
       <h4 class="sidebar__title">
         Инструменты
       </h4>
-      <ul class="sidebar__menu sidebar__menu--phrases">
+      <ul class="sidebar__menu sidebar__menu--tools">
         <li class="sidebar__menu-item sidebar__menu-item--dublicate">
           <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
             Работа с семантическим ядром: удаление дубликатов
@@ -157,6 +157,7 @@ $email = $_COOKIE['email'];
     </nav>
 
     <div class="account__balance">
+      <a href="#" class="profile-info__back">Вернуться к кампаниям</a>
       <h2 class="profile-info__title">Баланс</h2>
       <p class="profile-info__description">Здесь можно пополнить баланс, подключить тариф и включить автоплатеж.</p>
       <ul class="account-balance__list">
@@ -187,46 +188,44 @@ $email = $_COOKIE['email'];
       </ul>
       <h2 class="profile-info__title">Тарифы</h2>
       <ul class="price__list account__price">
-        <li id="616c096755cd9" class="price-item price-item__account">
+        <li id="616c096755cd9" class="price-item">
           <h3 class="price-item__title">Базовый</h3>
           <p class="price-item__cost">1 990 ₽</p>
           <ul class="price-item__services">
-            <li class="service-item__account service-item service-item--yes">3 рекламных кампании для защиты от
-              скликивания</li>
-            <li class="service-item service-item__account service-item--yes">База данных: > 135 млн. проверенных
-              пользователей</li>
-            <li class="service-item__account service-item service-item--yes">Автоматическое управление ставками: 1000<br>ключевых фраз</li>
-            <li class="service-item__account service-item service-item--yes">Минусатор поисковых запросов</li>
-            <li class="service-item__account service-item service-item--no">Персональный менеджер</li>
+            <li class="service-item service-item--yes">3 рекламных кампании для защиты от скликивания</li>
+            <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+            <li class="service-item service-item--yes">Автоматическое управление ставками: 1000<br>ключевых фраз</li>
+            <li class="service-item service-item--yes">Минусатор поисковых запросов</li>
+            <li class="service-item service-item--no">Персональный менеджер</li>
           </ul>
           <div class="price-item__button">
             <a href="#" class="price-item__button--wide button">Выбрать план</a>
           </div>
         </li>
-        <li id="616c099a82bc4" class="price-item price-item__account">
+        <li id="616c099a82bc4" class="price-item">
           <h3 class="price-item__title">Стандарт</h3>
           <p class="price-item__cost">4 990 ₽</p>
           <ul class="price-item__services">
-            <li class="service-item__account service-item service-item--yes">10 рекламных кампаний для защиты от скликивания</li>
-            <li class="service-item__account service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
-            <li class="service-item__account service-item service-item--yes">Автоматическое управление ставками:<br>5000 ключевых фраз</li>
-            <li class="service-item__account service-item service-item--yes">Минусатор поисковых запросов</li>
-            <li class="service-item__account service-item service-item--yes">Персональный менеджер</li>
+            <li class="service-item service-item--yes">10 рекламных кампаний для защиты от скликивания</li>
+            <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+            <li class="service-item service-item--yes">Автоматическое управление ставками:<br>5000 ключевых фраз</li>
+            <li class="service-item service-item--yes">Минусатор поисковых запросов</li>
+            <li class="service-item service-item--yes">Персональный менеджер</li>
           </ul>
           <div class="price-item__button">
             <a href="#" class="price-item__button--wide button">Выбрать план</a>
           </div>
         </li>
-        <li id="616c099b01e44" class="price-item price-item__account">
+        <li id="616c099b01e44" class="price-item">
           <h3 class="price-item__title">VIP</h3>
           <p class="price-item__cost">9 990 ₽</p>
           <ul class="price-item__services">
-            <li class="service-item__account service-item service-item--yes">100 рекламных кампаний для защиты от скликивания</li>
-            <li class="service-item__account service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
-            <li class="service-item__account service-item service-item--yes">Автоматическое управление ставками:<br>Неограниченное количество
+            <li class="service-item service-item--yes">100 рекламных кампаний для защиты от скликивания</li>
+            <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+            <li class="service-item service-item--yes">Автоматическое управление ставками:<br>Неограниченное количество
               ключевых фраз</li>
-            <li class="service-item__account service-item service-item--yes">Минусатор поисковых запросов</li>
-            <li class="service-item__account service-item service-item--yes">Персональный менеджер</li>
+            <li class="service-item service-item--yes">Минусатор поисковых запросов</li>
+            <li class="service-item service-item--yes">Персональный менеджер</li>
           </ul>
           <div class="price-item__button">
             <a href="#" class="price-item__button--wide button">Выбрать план</a>
@@ -242,6 +241,22 @@ $email = $_COOKIE['email'];
           “Базовый” 990 ₽</p>
         <button id="rate-cancel" class="button company-access__rate company-access__rate--cancel">Отмена</button>
         <button id="rate-ok" class="button company-access__rate company-access__rate--ok">Подтверждение</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="pop-up">
+    <div class="pop-up__body">
+      <div class="pop-up__content">
+        <div class="pop-up__title">
+          Применяем ваши параметры
+        </div>
+        <div class="pop-up__text">
+          Пожалуйста не закрывайте это окно пока мы применяем ваши параметры
+        </div>
       </div>
     </div>
   </div>

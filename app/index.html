@@ -1,262 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Защитим ваши рекламные кампании в Яндекс Директ от скликивания и растраты вашего рекламного бюджета"/>
-	<meta http-equiv="Cache-Control" content="no-cache" />
-	<meta property="og:url" content="https://lifeclick.ru">
-	<meta property="og:title" content="LifeClick - Защита ваших рекламных кампаний в Яндекс Директ от скликивания">
-	<meta property="og:description" content="Сервис отсеивает нежелательные бот-программы на этапе показов рекламы, сохраняя рекламный бюджет и отображая рекламу необходимой аудитории.">
-	<meta property="og:image" content="http://lifeclick.ru/img/mainScreen.jpg">
-	<meta name="keywords" content="+как бороться со скликиванием, +как бороться со скликиванием директ, +как защититься +от скликивания, +как защититься +от скликивания +в директе, антибот, антифрод директ, антифрод яндекс, борьба со скликиванием, борьба со скликиванием +в яндекс директ, борьба со скликиванием директ, защита +от склика, защита +от скликивания, защита +от скликивания +в директе, защита +от скликивания +в яндекс директ, сервис защиты +от скликивания +в директе, склик, склик директа, склик рекламы, скликивание, скликивание +как бороться, скликивание директа, скликивание контекстной рекламы, скликивание рекламы, скликивание рекламы +как бороться, скликивание рекламы директ, скликивание рекламы яндекс, скликивание рекламы яндекс директ, скликивание рся, скликивание яндекс, скликивание яндекс директа, скликивание яндекс директа +как бороться, скликивание яндекс защита, +как бороться со скликиванием +в яндекс директ, кликфрод, защита +от скликивания +в яндекс, скликивание ботами, защита +от скликивания рекламы яндекс ботами, +как избавиться +от ботов +в яндекс директе, яндекс директ спам, спам заявки +с сайта, яндекс директ бот, защита +от скликивания рекламы">
-	<link rel="stylesheet" href="css/style.min.css">
-	<link rel="icon" href="https://lifeclick.ru/favicon.ico" type="image/x-icon">
-	<title>LifeClick - Защита рекламных кампаний от скликивания</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Защитим ваши рекламные кампании в Яндекс Директ от скликивания и растраты вашего рекламного бюджета" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta property="og:url" content="https://lifeclick.ru">
+  <meta property="og:title" content="LifeClick - Защита ваших рекламных кампаний в Яндекс Директ от скликивания">
+  <meta property="og:description"
+    content="Сервис отсеивает нежелательные бот-программы на этапе показов рекламы, сохраняя рекламный бюджет и отображая рекламу необходимой аудитории.">
+  <meta property="og:image" content="http://lifeclick.ru/img/mainScreen.jpg">
+  <meta name="keywords"
+    content="+как бороться со скликиванием, +как бороться со скликиванием директ, +как защититься +от скликивания, +как защититься +от скликивания +в директе, антибот, антифрод директ, антифрод яндекс, борьба со скликиванием, борьба со скликиванием +в яндекс директ, борьба со скликиванием директ, защита +от склика, защита +от скликивания, защита +от скликивания +в директе, защита +от скликивания +в яндекс директ, сервис защиты +от скликивания +в директе, склик, склик директа, склик рекламы, скликивание, скликивание +как бороться, скликивание директа, скликивание контекстной рекламы, скликивание рекламы, скликивание рекламы +как бороться, скликивание рекламы директ, скликивание рекламы яндекс, скликивание рекламы яндекс директ, скликивание рся, скликивание яндекс, скликивание яндекс директа, скликивание яндекс директа +как бороться, скликивание яндекс защита, +как бороться со скликиванием +в яндекс директ, кликфрод, защита +от скликивания +в яндекс, скликивание ботами, защита +от скликивания рекламы яндекс ботами, +как избавиться +от ботов +в яндекс директе, яндекс директ спам, спам заявки +с сайта, яндекс директ бот, защита +от скликивания рекламы">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="https://lifeclick.ru/favicon.ico" type="image/x-icon">
+  <title>LifeClick - Защита рекламных кампаний от скликивания</title>
 </head>
+
 <body>
-	<header class="header">
-	<div class="container">
-		<div class="header__top">
-			<div class="logo"></div>
-			
-			<nav class="menu-nav">
-        <div class="header__security">
-          <button class="header__security-btn" id="securityBtn" type="button">Защита от скликивания</button>
-          <ul class="header__security-list" id="securityList">
-            <li class="header__security-item">
-              <a class="header__security-link" id="bidManagement" href="#">
-                Управление ставками
-              </a>
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <div class="logo"></div>
+
+        <nav class="menu-nav">
+          <div class="header__security">
+            <button class="header__security-btn" id="securityBtn" type="button">Защита от скликивания</button>
+            <ul class="header__security-list" id="securityList">
+              <li class="header__security-item">
+                <a class="header__security-link" id="bidManagement" href="#">
+                  Управление ставками
+                </a>
+              </li>
+            </ul>
+          </div>
+          <ul class="menu-nav__list">
+            <li class="menu-nav__item"><a href="#" class="menu-nav__link" id="about">О нас</a></li>
+            <li class="menu-nav__item"><a href="#" class="menu-nav__link" id="tariffs">Тарифы</a></li>
+            <li class="menu-nav__item"><a href="#" class="menu-nav__link" id="contacts">Контакты</a></li>
+            <li class="menu-nav__button"><a class="button menu-nav__button-link" href="auth">Личный кабинет</a></li>
+            <li class="menu-nav__icon"><a href="auth">
+                <picture>
+                  <source srcset="img/account.svg" type="image/webp"><img src="img/account.svg" alt=""></picture>
+              </a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="monitor">
+      <div class="container">
+        <div class="protect">
+          <h1 class="protect__title">Пора защитить вашу рекламу от <span>скликивания</span> в Я.Директ</h1>
+          <p class="protect__description">Забудьте о проблеме скликивания контекстной рекламы.</p>
+          <a href="campaigns" class="button protect__button">Подключить защиту</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="click-fraud">
+      <div class="click-fraud__wrap">
+        <div class="click-fraud__img">
+          <picture>
+            <source srcset="img/click-fraud.webp" type="image/webp"><img src="img/click-fraud.png" alt="Скликивание"
+              width="200" height="156"></picture>
+        </div>
+        <div class="click-fraud__about">
+          <h2 class="click-fraud__title">Скликивание (англ. click-fraud) </h2>
+          <p class="click-fraud__description">Это намеренный многократный переход по контекстным объявлениям с целью
+            растраты бюджета конкурента, продвигающего товары или услуги.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main">
+    <div class="container">
+      <div class="why-block">
+        <h2 class="why-block__title container-title">Зачем <span>скликивают</span> рекламу?</h2>
+        <div class="why-block__wrap">
+          <div class="why-item">
+            <div class="why-item__img">
+              <picture>
+                <source srcset="img/icons/prevent.svg" type="image/webp"><img src="img/icons/prevent.svg" alt="">
+              </picture>
+            </div>
+            <h3 class="why-item__title">Конкуренция</h3>
+            <p class="why-item__description">Как только у конкурента заканчивается рекламный бюджет, объявления
+              аналогичной компании поднимаются выше, благодаря чему на сайт заходит больше посетителей.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-item__img">
+              <picture>
+                <source srcset="img/icons/commercialism.svg" type="image/webp"><img src="img/icons/commercialism.svg"
+                  alt=""></picture>
+            </div>
+            <h3 class="why-item__title">Меркантильность</h3>
+            <p class="why-item__description">Когда стоимость привлечения трафика на платформу превышает цену размещения
+              объявления, владелец площадки может решить заработать больше через скликивание рекламы.</p>
+          </div>
+          <div class="why-item">
+            <div class="why-item__img">
+              <picture>
+                <source srcset="img/icons/fun.svg" type="image/webp"><img src="img/icons/fun.svg" alt=""></picture>
+            </div>
+            <h3 class="why-item__title">Развлечься</h3>
+            <p class="why-item__description">Есть люди, которым нравится заниматься скликиванием. Они не ищут
+              материальной выгоды и вредят не конкретному сайту, а многим площадкам.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gradient-gray">
+      <div class="work">
+        <div class="container work__wrap">
+          <h2 class="work__title container-title">Как мы <span>работаем?</span></h2>
+          <ul class="work__list">
+            <li class="work-item work-item__bots">
+              <h3 class="work-item__title">В интернете огромное количество ботов</h3>
+              <p class="work-item__description">Каждый день создаются новые боты, поэтому ваша защита обнаруживает их
+                уже после того, как они выполнили свою цель - скликнуть ваш рекламный бюджет. </p>
+            </li>
+            <li class="work-item work-item__base">
+              <h3 class="work-item__title work-item__title--right">Мы же пошли от обратного</h3>
+              <p class="work-item__description work-item__description--right">Каждый день мы проверяем пользователей
+                интернета из различных источников тех, кто ведет себя добросовестно, не использует ботов и не пытается
+                скликивать рекламу, мы заносим в нашу базу. </p>
+            </li>
+            <li class="work-item work-item__protect">
+              <h3 class="work-item__title">Подключив защиту у нас</h3>
+              <p class="work-item__description">Вы можете быть уверенны, что вашу рекламу будут видеть только
+                "проверенные" пользователи интернета, а боты в каком бы их количестве не создавали мошенники, вашу
+                рекламу не увидят, а значит не смогут выполнить свою задачу - скликнуть рекламный бюджет.</p>
             </li>
           </ul>
         </div>
-				<ul class="menu-nav__list">
-					<li class="menu-nav__item"><a href="#" class="menu-nav__link" id="about">О нас</a></li>
-					<li class="menu-nav__item"><a href="#" class="menu-nav__link" id="tariffs">Тарифы</a></li>
-					<li class="menu-nav__item"><a href="#" class="menu-nav__link" id="contacts">Контакты</a></li>
-					<li class="menu-nav__button"><a class="button menu-nav__button-link" href="auth">Личный кабинет</a></li>
-					<li class="menu-nav__icon"><a href="auth"><picture><source srcset="img/account.svg" type="image/webp"><img src="img/account.svg" alt=""></picture></a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-  
-	<div class="monitor">
-		<div class="container">
-			<div class="protect">
-				<h1 class="protect__title">Пора защитить вашу рекламу от <span>скликивания</span> в Я.Директ</h1>
-				<p class="protect__description">Забудьте о проблеме скликивания контекстной рекламы.</p>
-				<a href="campaigns" class="button protect__button">Подключить защиту</a>
-			</div>
-		</div>
-	</div>
-</header>
-	<div class="container">
-		<div class="click-fraud">
-    <div class="click-fraud__wrap">
-        <div class="click-fraud__img"><picture><source srcset="img/click-fraud.webp" type="image/webp"><img src="img/click-fraud.png" alt="Скликивание" width="200" height="156"></picture></div>
-        <div class="click-fraud__about">
-            <h2 class="click-fraud__title">Скликивание (англ. click-fraud) </h2>
-            <p class="click-fraud__description">Это намеренный многократный переход по контекстным объявлениям с целью растраты бюджета конкурента, продвигающего товары или услуги.</p>
-        </div>
+      </div>
     </div>
-</div>
-	</div>
-	
-	<main class="main">
-			<div class="container">
-				<div class="why-block">
-    <h2 class="why-block__title container-title">Зачем <span>скликивают</span> рекламу?</h2>
-    <div class="why-block__wrap">
-        <div class="why-item">
-            <div class="why-item__img"><picture><source srcset="img/icons/prevent.svg" type="image/webp"><img src="img/icons/prevent.svg" alt=""></picture></div>
-            <h3 class="why-item__title">Конкуренция</h3>
-            <p class="why-item__description">Как только у конкурента заканчивается рекламный бюджет, объявления аналогичной компании поднимаются выше, благодаря чему на сайт заходит больше посетителей.</p>
-        </div>
-        <div class="why-item">
-            <div class="why-item__img"><picture><source srcset="img/icons/commercialism.svg" type="image/webp"><img src="img/icons/commercialism.svg" alt=""></picture></div>
-            <h3 class="why-item__title">Меркантильность</h3>
-            <p class="why-item__description">Когда стоимость привлечения трафика на платформу превышает цену размещения объявления, владелец площадки может решить заработать больше через скликивание рекламы.</p>
-        </div>
-        <div class="why-item">
-            <div class="why-item__img"><picture><source srcset="img/icons/fun.svg" type="image/webp"><img src="img/icons/fun.svg" alt=""></picture></div>
-            <h3 class="why-item__title">Развлечься</h3>
-            <p class="why-item__description">Есть люди, которым нравится заниматься скликиванием. Они не ищут материальной выгоды и вредят не конкретному сайту, а многим площадкам.</p>
-        </div>
-    </div>
-</div>
-</div>
 
-<div class="bg-gradient-gray">
-    <div class="work">
-        <div class="container work__wrap">
-            <h2 class="work__title container-title">Как мы <span>работаем?</span></h2>
-            <ul class="work__list">
-                <li class="work-item work-item__bots">
-                    <h3 class="work-item__title">В интернете огромное количество ботов</h3>
-                    <p class="work-item__description">Каждый день создаются новые боты, поэтому ваша защита обнаруживает их уже после того, как они выполнили свою цель - скликнуть ваш рекламный бюджет. </p>
-                </li>
-                <li class="work-item work-item__base">
-                    <h3 class="work-item__title work-item__title--right">Мы же пошли от обратного</h3>
-                    <p class="work-item__description work-item__description--right">Каждый день мы проверяем пользователей интернета из различных источников тех, кто ведет себя добросовестно, не использует ботов и не пытается скликивать рекламу, мы заносим в нашу базу. </p>
-                </li>
-                <li class="work-item work-item__protect">
-                    <h3 class="work-item__title">Подключив защиту у нас</h3>
-                    <p class="work-item__description">Вы можете быть уверенны, что вашу рекламу будут видеть только "проверенные" пользователи интернета, а боты в каком бы их количестве не создавали мошенники, вашу рекламу не увидят, а значит не смогут выполнить свою задачу - скликнуть рекламный бюджет.</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-		<div class="bg-gray">
-    <div class="container how">
+    <div class="bg-gray">
+      <div class="container how">
         <h2 class="how__title container-title">Как <span>защититься</span> от скликивания?</h2>
         <p class="how__description">Получив доступ в личный кабинет, вам достаточно выполнить два действия</p>
         <div class="how__content">
-            <div class="how__blocks">
-                <div class="how-item">
-                        <h3 class="how-item__title">Привяжите Яндекс аккаунт</h3>
-                        <p class="how-item__description">Это необходимо, чтобы мы с помощью Яндекс.Директ API могли получить доступ к вашим рекламным кампаниям и автоматически управлять корректировками ставок.</p>
-                </div>
-                <div class="how-item">
-                    <h3 class="how-item__title">Выберите кампанию</h3>
-                    <p class="how-item__description">В вашем личном кабинете высветиться список ваших рекламных кампаний Яндекс.Директ. Вам остается выбрать кампании, которые вы хотите защитить и подтвердить выбор.</p>
-                </div>
+          <div class="how__blocks">
+            <div class="how-item">
+              <h3 class="how-item__title">Привяжите Яндекс аккаунт</h3>
+              <p class="how-item__description">Это необходимо, чтобы мы с помощью Яндекс.Директ API могли получить
+                доступ к вашим рекламным кампаниям и автоматически управлять корректировками ставок.</p>
             </div>
-            <div class="how__img">
-                <picture><source srcset="img/my-company.png" type="image/webp"><img src="img/my-company.png" alt="Мои компании" width="540" height="430"></picture>
+            <div class="how-item">
+              <h3 class="how-item__title">Выберите кампанию</h3>
+              <p class="how-item__description">В вашем личном кабинете высветиться список ваших рекламных кампаний
+                Яндекс.Директ. Вам остается выбрать кампании, которые вы хотите защитить и подтвердить выбор.</p>
             </div>
+          </div>
+          <div class="how__img">
+            <picture>
+              <source srcset="img/my-company.png" type="image/webp"><img src="img/my-company.png" alt="Мои компании"
+                width="540" height="430"></picture>
+          </div>
         </div>
         <div class="how__button">
-            <a href="campaigns" class="button protect__button">Подключить защиту</a>
+          <a href="campaigns" class="button protect__button">Подключить защиту</a>
         </div>
+      </div>
     </div>
-</div>
-		<section class="care container">
-    <h2 class="care__title container-title">Мы <span>позаботимся</span> о ваших рекламных кампаниях</h2>
-    <ul class="care__list">
+    <section class="care container">
+      <h2 class="care__title container-title">Мы <span>позаботимся</span> о ваших рекламных кампаниях</h2>
+      <ul class="care__list">
         <li class="care-item">
-            <picture><source srcset="img/icons/budget.svg" type="image/webp"><img class="care-item__icon" src="img/icons/budget.svg" width="60" height="60" alt="Бюджет"></picture>
-            <h3 class="care-item__title">Сбережем бюджет</h3>
-            <p class="care-item__description">Сбережем ваши финансы, которые вы могли бы потерять из-за скиликивания.</p>
+          <picture>
+            <source srcset="img/icons/budget.svg" type="image/webp"><img class="care-item__icon"
+              src="img/icons/budget.svg" width="60" height="60" alt="Бюджет"></picture>
+          <h3 class="care-item__title">Сбережем бюджет</h3>
+          <p class="care-item__description">Сбережем ваши финансы, которые вы могли бы потерять из-за скиликивания.</p>
         </li>
         <li class="care-item">
-            <picture><source srcset="img/icons/time.svg" type="image/webp"><img class="care-item__icon" src="img/icons/time.svg" width="60" height="60" alt=""></picture>
-            <h3 class="care-item__title">Сохраним время</h3>
-            <p class="care-item__description">Вы можете спокойно работать над собственными проектами, а мы обо всем позаботимся.</p>
+          <picture>
+            <source srcset="img/icons/time.svg" type="image/webp"><img class="care-item__icon" src="img/icons/time.svg"
+              width="60" height="60" alt=""></picture>
+          <h3 class="care-item__title">Сохраним время</h3>
+          <p class="care-item__description">Вы можете спокойно работать над собственными проектами, а мы обо всем
+            позаботимся.</p>
         </li>
         <li class="care-item">
-            <picture><source srcset="img/icons/simplicity.svg" type="image/webp"><img class="care-item__icon" src="img/icons/simplicity.svg" width="60" height="60" alt=""></picture>
-            <h3 class="care-item__title">Простота</h3>
-            <p class="care-item__description">Просто выберите необходимые кампании и мы добавим корректировку ставок с нашим сегментом ботов.</p>
+          <picture>
+            <source srcset="img/icons/simplicity.svg" type="image/webp"><img class="care-item__icon"
+              src="img/icons/simplicity.svg" width="60" height="60" alt=""></picture>
+          <h3 class="care-item__title">Простота</h3>
+          <p class="care-item__description">Просто выберите необходимые кампании и мы добавим корректировку ставок с
+            нашим сегментом ботов.</p>
         </li>
         <li class="care-item">
-            <picture><source srcset="img/icons/confidential.svg" type="image/webp"><img class="care-item__icon" src="img/icons/confidential.svg" width="60" height="60" alt=""></picture>
-            <h3 class="care-item__title">Безопасность</h3>
-            <p class="care-item__description">Вся возможная информация о пользователях храниться на надеждем изолированном сервере.</p>
+          <picture>
+            <source srcset="img/icons/confidential.svg" type="image/webp"><img class="care-item__icon"
+              src="img/icons/confidential.svg" width="60" height="60" alt=""></picture>
+          <h3 class="care-item__title">Безопасность</h3>
+          <p class="care-item__description">Вся возможная информация о пользователях храниться на надеждем изолированном
+            сервере.</p>
         </li>
         <li class="care-item">
-            <picture><source srcset="img/icons/automatization.svg" type="image/webp"><img class="care-item__icon" src="img/icons/automatization.svg" width="60" height="60" alt=""></picture>
-            <h3 class="care-item__title">Автоматизация</h3>
-            <p class="care-item__description">Наша система автоматически заблокирует показ рекламы ботам так что они её не увидят.</p>
+          <picture>
+            <source srcset="img/icons/automatization.svg" type="image/webp"><img class="care-item__icon"
+              src="img/icons/automatization.svg" width="60" height="60" alt=""></picture>
+          <h3 class="care-item__title">Автоматизация</h3>
+          <p class="care-item__description">Наша система автоматически заблокирует показ рекламы ботам так что они её не
+            увидят.</p>
         </li>
         <li class="care-item">
-            <picture><source srcset="img/icons/support.svg" type="image/webp"><img class="care-item__icon" src="img/icons/support.svg" width="60" height="60" alt=""></picture>
-            <h3 class="care-item__title">Поддержка 24/7</h3>
-            <p class="care-item__description">Мы всегда готовы помочь и ответить на любые ваши вопросы.</p>
+          <picture>
+            <source srcset="img/icons/support.svg" type="image/webp"><img class="care-item__icon"
+              src="img/icons/support.svg" width="60" height="60" alt=""></picture>
+          <h3 class="care-item__title">Поддержка 24/7</h3>
+          <p class="care-item__description">Мы всегда готовы помочь и ответить на любые ваши вопросы.</p>
         </li>
-    </ul>
-</section>
-		<section class="price">
-    <div class="container price__wrap">
+      </ul>
+    </section>
+    <section class="price">
+      <div class="container price__wrap">
         <h2 class="price__title">Тарифы</h2>
         <ul class="price__list">
-            <li class="price-item">
-                <h3 class="price-item__title">Базовый</h3>
-                <p class="price-item__cost">1 990 ₽</p>
-                <ul class="price-item__services">
-                    <li class="service-item service-item--yes">3 кампании для защиты</li>
-                    <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
-                    <li class="service-item service-item--yes">Автоматическое управление ставками:<br>1000 ключевых фраз</li>
-                    <li class="service-item service-item--no">Персональный менеджер</li>
-                </ul>
-                <div class="price-item__button">
-                    <a href="balance" class="price-item__button--wide button">Выбрать план</a>
-                </div>
-            </li>
-            <li class="price-item">
-                <h3 class="price-item__title">Стандарт</h3>
-                <p class="price-item__cost">4 990 ₽</p>
-                <ul class="price-item__services">
-                    <li class="service-item service-item--yes">10 кампаний для защиты</li>
-                    <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
-                    <li class="service-item service-item--yes">Автоматическое управление ставками:<br>5000 ключевых фраз</li>
-                    <li class="service-item service-item--yes">Персональный менеджер</li>
-                </ul>
-                <div class="price-item__button">
-                    <a href="balance" class="price-item__button--wide button">Выбрать план</a>
-                </div>
-            </li>
-            <li class="price-item">
-                <h3 class="price-item__title">VIP</h3>
-                <p class="price-item__cost">9 990 ₽</p>
-                <ul class="price-item__services">
-                    <li class="service-item service-item--yes">100 кампаний для защиты</li>
-                    <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
-                    <li class="service-item service-item--yes">Автоматическое управление ставками:<br>Неограниченное количество ключевых фраз</li>
-                    <li class="service-item service-item--yes">Персональный менеджер</li>
-                </ul>
-                <div class="price-item__button">
-                    <a href="balance" class="price-item__button--wide button">Выбрать план</a>
-                </div>
-            </li>
+          <li class="price-item">
+            <h3 class="price-item__title">Базовый</h3>
+            <p class="price-item__cost">1 990 ₽</p>
+            <ul class="price-item__services">
+              <li class="service-item service-item--yes">3 кампании для защиты</li>
+              <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+              <li class="service-item service-item--yes">Автоматическое управление ставками:<br>1000 ключевых фраз</li>
+              <li class="service-item service-item--yes">Минусатор поисковых запросов</li>
+              <li class="service-item service-item--no">Персональный менеджер</li>
+            </ul>
+            <div class="price-item__button">
+              <a href="balance" class="price-item__button--wide button">Выбрать план</a>
+            </div>
+          </li>
+          <li class="price-item">
+            <h3 class="price-item__title">Стандарт</h3>
+            <p class="price-item__cost">4 990 ₽</p>
+            <ul class="price-item__services">
+              <li class="service-item service-item--yes">10 кампаний для защиты</li>
+              <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+              <li class="service-item service-item--yes">Автоматическое управление ставками:<br>5000 ключевых фраз</li>
+              <li class="service-item service-item--yes">Минусатор поисковых запросов</li>
+              <li class="service-item service-item--yes">Персональный менеджер</li>
+            </ul>
+            <div class="price-item__button">
+              <a href="balance" class="price-item__button--wide button">Выбрать план</a>
+            </div>
+          </li>
+          <li class="price-item">
+            <h3 class="price-item__title">VIP</h3>
+            <p class="price-item__cost">9 990 ₽</p>
+            <ul class="price-item__services">
+              <li class="service-item service-item--yes">100 кампаний для защиты</li>
+              <li class="service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
+              <li class="service-item service-item--yes">Автоматическое управление ставками:<br>Неограниченное
+                количество ключевых фраз</li>
+              <li class="service-item service-item--yes">Минусатор поисковых запросов</li>
+              <li class="service-item service-item--yes">Персональный менеджер</li>
+            </ul>
+            <div class="price-item__button">
+              <a href="balance" class="price-item__button--wide button">Выбрать план</a>
+            </div>
+          </li>
         </ul>
-    </div>
-</section>
-		<footer class="footer">
-    <div class="container">
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
         <h2 class="footer__title">Остались вопросы?</h2>
         <div class="footer__buttons">
-            <a class="button footer__button--support" href="#footer">Написать службе поддержки</a>
-            <a class="button footer__button--phone" href="tel:+88007073708">Позвонить: 8 (800) 707-37-08</a>
+          <a class="button footer__button--support" href="#footer">Написать службе поддержки</a>
+          <a class="button footer__button--phone" href="tel:+88007073708">Позвонить: 8 (800) 707-37-08</a>
         </div>
         <ul class="footer__menu">
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#" id="home">Главная</a></li>
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#" id="tariffs">Тарифы</a></li>
-            <li class="footer-menu__item"><a class="footer-menu__link" href="#" id="contacts">Контакты</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="#" id="home">Главная</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="#" id="tariffs">Тарифы</a></li>
+          <li class="footer-menu__item"><a class="footer-menu__link" href="#" id="contacts">Контакты</a></li>
         </ul>
         <ul class="footer__social">
-            <li class="footer-social__item"><a href="#" id="vk"><picture><source srcset="img/icons/vk.svg" type="image/webp"><img src="img/icons/vk.svg" alt="Вконтакте" width="24" height="24"></picture></a></li>
-            <li class="footer-social__item"><a href="#" id="tg"><picture><source srcset="img/icons/telegram.svg" type="image/webp"><img src="img/icons/telegram.svg" alt="Telegram" width="24" height="24"></picture></a></li>
+          <li class="footer-social__item"><a href="#" id="vk">
+              <picture>
+                <source srcset="img/icons/vk.svg" type="image/webp"><img src="img/icons/vk.svg" alt="Вконтакте"
+                  width="24" height="24"></picture>
+            </a></li>
+          <li class="footer-social__item"><a href="#" id="tg">
+              <picture>
+                <source srcset="img/icons/telegram.svg" type="image/webp"><img src="img/icons/telegram.svg"
+                  alt="Telegram" width="24" height="24"></picture>
+            </a></li>
         </ul>
-    </div>
-</footer>
-		
-	</main>
-    <!-- Carrot quest BEGIN -->
-    <script type="text/javascript">
-      ! function () {
-        function t(t, e) {
-          return function () {
-            window.carrotquestasync.push(t, arguments)
-          }
+      </div>
+    </footer>
+
+  </main>
+  <!-- Carrot quest BEGIN -->
+  <script type="text/javascript">
+    ! function () {
+      function t(t, e) {
+        return function () {
+          window.carrotquestasync.push(t, arguments)
         }
-        if ("undefined" == typeof carrotquest) {
-          var e = document.createElement("script");
-          e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
-            .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
-            carrotquest.settings = {};
-          for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
-              "trackMessageInteraction"
-            ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
-        }
-      }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
-    </script>
-    <!-- Carrot quest END -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/index.min.js"></script>
+      }
+      if ("undefined" == typeof carrotquest) {
+        var e = document.createElement("script");
+        e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
+          .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
+          carrotquest.settings = {};
+        for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
+            "trackMessageInteraction"
+          ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
+      }
+    }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+  </script>
+  <!-- Carrot quest END -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/index.min.js"></script>
 </body>
+
 </html>

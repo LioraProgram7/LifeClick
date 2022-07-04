@@ -1,0 +1,46 @@
+<?php
+session_start();
+if (isset($_COOKIE['access_token'], $_COOKIE['email']))
+{
+    header("Location: campaigns");
+    die();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Carrot quest BEGIN -->
+    <script type="text/javascript">
+    !function(){function t(t,e){return function(){window.carrotquestasync.push(t,arguments)}}if("undefined"==typeof carrotquest){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://cdn.carrotquest.app/api.min.js",document.getElementsByTagName("head")[0].appendChild(e),window.carrotquest={},window.carrotquestasync=[],carrotquest.settings={};for(var n=["connect","track","identify","auth","onReady","addCallback","removeCallback","trackMessageInteraction"],a=0;a<n.length;a++)carrotquest[n[a]]=t(n[a])}}(),carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+    </script>
+    <!-- Carrot quest END -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/reg.min.js"></script>
+    <title>LifeClick - Регистрация</title>
+</head>
+<body>
+    <div class="reg__bg">
+        <div class="container">
+            <div class="logo-reg logo-img"></div>
+            <div class="reg-box">
+                <h2 class="reg-box__title">Регистрация</h2>
+                <input type="email" class="reg-box__input" placeholder="E-mail"><div class="reg-box__error--email"></div>
+                <input type="tel" class="reg-box__input" placeholder="Номер телефона"><div class="reg-box__error--numphone"></div>
+                <input type="password" class="reg-box__input" placeholder="Пароль"><div class="reg-box__error--password"></div>
+                <input type="password" class="reg-box__input" placeholder="Подтверждение пароля"><div class="reg-box__error--password-match"></div>
+                <button class="button reg-box__button">Зарегистрироваться</button>
+                <label class="reg-box__accept">Я принимаю <a id="terms-of-use" href="#" class="reg-box__link">Условия использования</a> и <a id="privacy-policy" href="#" class="reg-box__link">Политику конфиденциальности</a>
+                    <input type="checkbox" value="yes">
+                    <span class="reg-box__checkmark"></span>
+                </label><div class="reg-box__error--accept"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

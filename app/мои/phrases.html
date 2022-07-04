@@ -1,0 +1,727 @@
+<?php
+session_start();
+if (!isset($_COOKIE['access_token'], $_COOKIE['email']))
+{
+    header("Location: auth");
+    die();
+}
+$access_token = $_COOKIE['access_token'];
+$email = $_COOKIE['email'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Выбор кампаний, для которых вы хотите включить защиту" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- Carrot quest BEGIN -->
+  <script type="text/javascript">
+    ! function () {
+      function t(t, e) {
+        return function () {
+          window.carrotquestasync.push(t, arguments)
+        }
+      }
+      if ("undefined" == typeof carrotquest) {
+        var e = document.createElement("script");
+        e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
+          .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
+          carrotquest.settings = {};
+        for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
+            "trackMessageInteraction"
+          ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
+      }
+    }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+  </script>
+  <!-- Carrot quest END -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/script.min.js"></script>
+  <script src="js/account-menu.min.js"></script>
+  <script src="js/phrases.min.js"></script>
+  <title>LifeClick - Профиль</title>
+</head>
+
+<body>
+  <div class="profile-header">
+    <div class="profile-header__logo"></div>
+    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
+    <div class="profile-header__wrap">
+
+      <div class="balance">
+        <div class="balance__status">
+          <p class="profile-header__text">Баланс</p>
+          <span id="amount">0,00 ₽</span>
+        </div>
+        <div class="balance__button">
+          <a href="#" class="balance__link">Пополнить</a>
+        </div>
+      </div>
+      <div class="profile-header__info">
+        <p class="profile-header__text">Аккаунт</p>
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="content__phrases">
+    <nav class="sidebar">
+
+      <div class="sidebar__wrap profile-header__wrap">
+        <div class="profile-header__info">
+          <p class="profile-header__text">Аккаунт</p>
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+        </div>
+        <div class="balance">
+          <div class="balance__status">
+            <p class="profile-header__text">Баланс</p>
+            <span id="amount">0,00 ₽</span>
+          </div>
+          <div class="balance__button">
+            <a href="#" class="balance__link">Пополнить</a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sidebar__title">
+        Управление
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
+            Защита от скликивания
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
+            Управление ставками
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
+            Минусатор
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
+          </a>
+        </li>
+      </ul>
+
+      <h4 class="sidebar__title">
+        Инструменты
+      </h4>
+      <ul class="sidebar__menu sidebar__menu--phrases">
+        <li class="sidebar__menu-item sidebar__menu-item--dublicate">
+          <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
+            Работа с семантическим ядром: удаление дубликатов
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--generator">
+          <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
+            Генератор UTM-меток
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--minuser">
+          <a class="sidebar__menu-link sidebar__menu-link--minuser" href="#">
+            РСЯ минусатор площадок
+          </a>
+        </li>
+      </ul>
+
+      <ul class="sidebar__menu sidebar__menu--bottom">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+            Тарифы
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--help">
+          <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+            Помощь
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="phrases">
+
+      <div class="phrases__name">
+        <h1 class="phrases__title">Мои ключевые фразы</h1>
+        <a class="phrases__link" href="#">Вернуться к кампаниям</a>
+      </div>
+
+      <p class="phrases__description">
+        Выберите ключевые фразы, установите параметры и включите бид-менеджер<br>
+        Чтобы активировать бид-менеджер, обязательно установите параметры трафика и цены.<br>
+        Чтобы установить одинаковые параметры для группы ключевых фраз, отметьте нужные и введите параметры для 1 из
+        отмеченных вами ключевой фразы, такие же параметры применятся для всех остальных выделенных ключей.
+      </p>
+
+      <div class="phrases-lines">
+        <div class="phrases-line">
+          <div class="phrases__table">
+            <!-- Заголовок таблицы -->
+            <ul class="phrases__head">
+              <label class="phrases__head-checkbox phrases__labelAdaptive">
+                <input class="phrases__input phrases__input-all" type="checkbox">
+                <span class="phrases__check phrases__check--all"></span>
+              </label>
+
+              <li class="phrases__head-item phrases__head-item--all">
+                <label class="phrases__head-checkbox phrases__label">
+                  <input class="phrases__input phrases__input-all" type="checkbox">
+                  Название
+                  <span class="phrases__check phrases__check--all"></span>
+                </label>
+              </li>
+              <li class="phrases__head-item phrases__head-item--desctop">
+                Место показа
+              </li>
+              <li class="phrases__head-item phrases__head-item--desctop">
+                Ставка
+              </li>
+              <li class="phrases__head-item phrases__head-item--desctop">
+                Прогноз
+                трафика
+              </li>
+              <li class="phrases__head-item phrases__head-item--desctop">
+                Максимальная списываемая цена
+              </li>
+              <li class="phrases__head-item phrases__head-item--desctop phrases__head-item--status">
+                Статус
+              </li>
+              <li class="phrases__head-item">
+                <button class="phrases__head-btn phrases__head-btn--off" id="disable-btn">
+                  Отключить
+                </button>
+                <button class="phrases__head-btn" id="enable-btn">
+                  Включить
+                </button>
+              </li>
+            </ul><!-- Конец Заголовка таблицы -->
+
+            <!-- ================ Начало таблицы чекбоксов ================ -->
+            <ul class="phrases__list">
+
+              <!-- ================ Главный чекбокс ================ -->
+              <li class="phrases__campany">
+
+                <label class="phrases__checkbox phrases__label">
+                  <input class="phrases__input" type="checkbox" value="" name="">
+                  <span class="phrases__check"></span>
+                </label>
+
+                <div class="phrases__checkbox-info">
+                  <h3 class="phrases__checkbox-title">
+                    <span class="phrases__checkbox-name">
+                      Текстово-графическая кампания №1
+                    </span>
+                    <span class="phrases__checkbox-plus"></span>
+                  </h3>
+                  <span class="phrases__checkbox-number">
+                    № 12345678
+                  </span>
+                </div>
+
+
+                <!-- ================ Вложенные чекбоксы ================ -->
+                <ul class="phrases__items">
+
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--on">Включен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">Поиск</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--off">Отключен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--on">Включен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--off">Отключен</span>
+                    </div>
+                  </li>
+
+                </ul><!-- Конец вложенных чекбоксов -->
+
+              </li> <!-- Конец главного чекбоксa -->
+
+              <li class="phrases__campany">
+
+                <label class="phrases__checkbox phrases__label">
+                  <input class="phrases__input" type="checkbox" value="" name="">
+                  <span class="phrases__check"></span>
+                </label>
+
+                <div class="phrases__checkbox-info">
+                  <h3 class="phrases__checkbox-title">
+                    <span class="phrases__checkbox-name">
+                      Текстово-графическая кампания №2
+                    </span>
+                    <span class="phrases__checkbox-plus"></span>
+                  </h3>
+                  <span class="phrases__checkbox-number">
+                    № 12345678
+                  </span>
+                </div>
+
+
+                <!-- ================ Вложенные чекбоксы ================ -->
+                <ul class="phrases__items">
+
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--on">Включен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Поиск</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--off">Отключен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--on">Включен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--off">Отключен</span>
+                    </div>
+                  </li>
+
+                </ul><!-- Конец вложенных чекбоксов -->
+
+              </li> <!-- Конец главного чекбоксa -->
+
+              <li class="phrases__campany">
+
+                <label class="phrases__checkbox phrases__label">
+                  <input class="phrases__input" type="checkbox" value="" name="">
+                  <span class="phrases__check"></span>
+                </label>
+
+                <div class="phrases__checkbox-info">
+                  <h3 class="phrases__checkbox-title">
+                    <span class="phrases__checkbox-name">
+                      Текстово-графическая кампания №3
+                    </span>
+                    <span class="phrases__checkbox-plus"></span>
+                  </h3>
+                  <span class="phrases__checkbox-number">
+                    № 12345678
+                  </span>
+                </div>
+
+
+                <!-- ================ Вложенные чекбоксы ================ -->
+                <ul class="phrases__items">
+
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--on">Включен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Поиск</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--off">Отключен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--on">Включен</span>
+                    </div>
+                  </li>
+                  <li class="phrases__item">
+                    <div class="phrases__item-wrapper">
+                      <label class="phrases__item-checkbox phrases__label">
+                        <input class="phrases__input" type="checkbox" value="" name="">
+                        <span class="phrases__check"></span>
+                      </label>
+                      <span class="phrases__item-name">Защита от скликивания</span>
+                      <span class="phrases__item-number">№ 12345678901</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-place">
+                      <span class="phrases__item-head">Место показа</span>
+                      <span class="phrases__item-span">РСЯ</span>
+                    </div>
+                    <div class="phrases__item-inner phrases__item-bids">
+                      <span class="phrases__item-head">Ставка</span>
+                      <span class="phrases__item-span">300 ₽</span>
+                    </div>
+
+                    <div class="phrases__item-inner phrases__item-predict">
+                      <span class="phrases__item-head">Прогноз трафика</span>
+                      <input class="phrases__item-input" type="number" name="" id="" value="60" placeholder="60"
+                        min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-price">
+                      <span class="phrases__item-head">Максимальная списываемая цена</span>
+                      <input class=" phrases__item-input" type="number" name="" id="" placeholder="200 ₽" min="0">
+                    </div>
+                    <div class="phrases__item-inner phrases__item-status">
+                      <span class="phrases__status phrases__status--off">Отключен</span>
+                    </div>
+                  </li>
+                </ul><!-- Конец вложенных чекбоксов -->
+
+              </li> <!-- Конец главного чекбоксa -->
+
+            </ul><!-- Конец таблицы чекбоксов -->
+
+            <div class="company-control">
+              <div class="company-control__check">
+                <label class="company-control__checkbox">
+                  <input class="company-control__input" type="checkbox">
+                  <span class="company-control__checkmark"></span>
+                </label>
+                <div class="company-control__text">
+                  4 Ключевые <span>фразы</span>
+                  <p class="company-control__text-active">4 aктивные</p>
+                </div>
+              </div>
+
+              <div class="company-control__button-box">
+                <button class="company-control__btn company-control__btn--red btn--menager" type="button">
+                  Отключить <span>бид-менеджер</span>
+                </button>
+                <button class="company-control__btn company-control__btn--green btn--menager" type="button">
+                  Включить <span>бид-менеджер</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <h2 class="company__none">Список ваших кампаний пуст</h2>
+    </div>
+  </div>
+
+  <div class="pop-up">
+    <div class="pop-up__body">
+      <div class="pop-up__content">
+        <div class="pop-up__title">
+          Применяем ваши параметры
+        </div>
+        <div class="pop-up__text">
+          Пожалуйста не закрывайте это окно пока мы применяем ваши параметры
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

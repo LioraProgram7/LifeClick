@@ -1,0 +1,45 @@
+<?php
+session_start();
+if (isset($_COOKIE['access_token'], $_COOKIE['email']))
+{
+    header("Location: campaigns");
+    die();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Вход в аккаунт"/>
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- Carrot quest BEGIN -->
+    <script type="text/javascript">
+    !function(){function t(t,e){return function(){window.carrotquestasync.push(t,arguments)}}if("undefined"==typeof carrotquest){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://cdn.carrotquest.app/api.min.js",document.getElementsByTagName("head")[0].appendChild(e),window.carrotquest={},window.carrotquestasync=[],carrotquest.settings={};for(var n=["connect","track","identify","auth","onReady","addCallback","removeCallback","trackMessageInteraction"],a=0;a<n.length;a++)carrotquest[n[a]]=t(n[a])}}(),carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+    </script>
+    <!-- Carrot quest END -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <script src="js/auth.min.js"></script>
+    <title>LifeClick - Авторизация</title>
+</head>
+<body>
+    <div class="auth__bg">
+        <div class="container">
+            <div class="logo-reg logo-img"></div>
+            <div class="auth-box">
+                <h2 class="auth-box__title">Авторизация</h2>
+                <input type="email" class="auth-box__input" placeholder="E-mail"><div class="auth-box__error--email"></div>
+                <input type="password" class="auth-box__input" placeholder="Пароль"><div class="auth-box__error--password"></div>
+                <button class="button auth-box__button">Войти</button>
+                <ul class="auth-box__buttons">
+                    <li><a href="reg" class="auth-box__link">Зарегистрироваться</a></li>
+                    <li><a href="#" class="auth-box__link">Забыли пароль?</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

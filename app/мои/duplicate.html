@@ -1,459 +1,217 @@
-<?php
-
-session_start();
-
-if (!isset($_COOKIE['access_token'], $_COOKIE['email']))
-
-{
-
-    header("Location: auth");
-
-    die();
-
-}
-
-$access_token = $_COOKIE['access_token'];
-
-$email = $_COOKIE['email'];
-
-?>
-
 <!DOCTYPE html>
-
 <html lang="ru">
 
-
-
 <head>
-
   <meta charset="UTF-8">
-
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!-- Carrot quest BEGIN -->
-
-  <script type="text/javascript">
-
-    ! function () {
-
-      function t(t, e) {
-
-        return function () {
-
-          window.carrotquestasync.push(t, arguments)
-
-        }
-
-      }
-
-      if ("undefined" == typeof carrotquest) {
-
-        var e = document.createElement("script");
-
-        e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
-
-          .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
-
-          carrotquest.settings = {};
-
-        for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
-
-            "trackMessageInteraction"
-
-          ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
-
-      }
-
-    }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
-
-  </script>
-
-  <!-- Carrot quest END -->
-
-  <script src="js/jquery-3.6.0.min.js"></script>
-
-  <script src="js/script.min.js"></script>
-
-  <script src="js/account-menu.min.js"></script>
-
-  <script src="js/duplicate.min.js"></script>
-
   <title>LifeClick - Удаление дубликатов</title>
-
 </head>
-
-
 
 <body>
 
-
-
   <div class="profile-header">
-
-    <div class="profile-header__logo logo-img"></div>
-
+    <div class="profile-header__logo"></div>
     <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
-
     <div class="profile-header__wrap">
 
-
-
       <div class="balance">
-
         <div class="balance__status">
-
           <p class="profile-header__text">Баланс</p>
-
           <span id="amount">0,00 ₽</span>
-
         </div>
-
         <div class="balance__button">
-
           <a href="#" class="balance__link">Пополнить</a>
-
         </div>
-
       </div>
-
       <div class="profile-header__info">
-
         <p class="profile-header__text">Аккаунт</p>
-
-        <a href="#" class="profile-header__account"><?php echo $email ?></a>
-
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
       </div>
-
     </div>
-
   </div>
-
-
 
   <div class="content__dublicate">
-
     <nav class="sidebar">
 
-
-
       <div class="sidebar__wrap profile-header__wrap">
-
         <div class="profile-header__info">
-
           <p class="profile-header__text">Аккаунт</p>
-
-          <a href="#" class="profile-header__account"><?php echo $email ?></a>
-
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
         </div>
-
         <div class="balance">
-
           <div class="balance__status">
-
             <p class="profile-header__text">Баланс</p>
-
             <span id="amount">0,00 ₽</span>
-
           </div>
-
           <div class="balance__button">
-
             <a href="#" class="balance__link">Пополнить</a>
-
           </div>
-
         </div>
-
       </div>
 
-
-
       <h4 class="sidebar__title">
-
         Управление
-
       </h4>
-
       <ul class="sidebar__menu">
-
         <li class="sidebar__menu-item">
-
           <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
-
             Защита от скликивания
-
           </a>
-
         </li>
-
         <li class="sidebar__menu-item">
-
           <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
-
             Управление ставками
-
           </a>
-
         </li>
-
         <li class="sidebar__menu-item">
-
           <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
-
             Минусатор
-
           </a>
-
         </li>
-
         <li class="sidebar__menu-item">
-
           <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
-
             Чат для сайта
-
           </a>
-
         </li>
-
       </ul>
-
-
 
       <h4 class="sidebar__title">
-
         Инструменты
-
       </h4>
-
       <ul class="sidebar__menu">
-
         <li class="sidebar__menu-item sidebar__menu-item--dublicate">
-
           <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
-
             Работа с семантическим ядром: удаление дубликатов
-
           </a>
-
         </li>
-
         <li class="sidebar__menu-item sidebar__menu-item--generator">
-
           <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
-
             Генератор UTM-меток
-
           </a>
-
         </li>
-
         <li class="sidebar__menu-item sidebar__menu-item--minuser">
-
           <a class="sidebar__menu-link sidebar__menu-link--minuser" href="#">
-
             РСЯ минусатор площадок
-
           </a>
-
         </li>
-
       </ul>
-
-
 
       <ul class="sidebar__menu sidebar__menu--bottom">
-
         <li class="sidebar__menu-item">
-
           <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
-
             Тарифы
-
           </a>
-
         </li>
-
         <li class="sidebar__menu-item sidebar__menu-item--help">
-
           <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
-
             Помощь
-
           </a>
-
         </li>
-
       </ul>
-
     </nav>
 
-
-
     <div class="duplicate">
-
       <div class="duplicate__table">
-
         <div class="duplicate__wrapper">
 
-
-
           <ul class="duplicate__head">
-
             <li class="duplicate__item">
-
               <p class="duplicate__title">
-
                 Ключевые фразы
-
               </p>
-
             </li>
-
             <li class="duplicate__item">
-
               <p class="duplicate__title">
-
                 Ключевые фразы*
-
               </p>
-
             </li>
-
             <li class="duplicate__item">
-
               <p class="duplicate__title">
-
                 Удаленные ключевые фразы
-
               </p>
-
             </li>
-
             <li class="duplicate__item">
-
               <p class="duplicate__title">
-
                 Отфильтрованные ключевые фразы
-
               </p>
-
             </li>
-
             <li class="duplicate__item duplicate__item--left">
-
               <p class="duplicate__title">
-
                 Уникальные ключевые фразы
-
               </p>
-
             </li>
-
           </ul>
 
-
-
           <div class="duplicate__box">
-
             <ul class="duplicate__content">
-
               <li class="duplicate__list">
-
-                <textarea class="duplicate__text duplicate__textarea" type="text" id="forText"></textarea>
-
+                <textarea class="duplicate__text duplicate__textarea" type="text" id="forText"
+                  placeholder="Защита от скликивания, защита, скликивание, бид-менеджер, защита от скликивания, защита, скликивание,бид-менеджер, менеджер"></textarea>
               </li>
 
-
-
               <li class="duplicate__list">
-
-                <textarea class="duplicate__text duplicate__textarea" type="text" id="forText"></textarea>
-
+                <textarea class="duplicate__text duplicate__textarea" type="text" id="forText"
+                  placeholder="Защита от скликивания, защита, скликивание"></textarea>
               </li>
 
-
-
               <li class="duplicate__list">
-
-                <p class="duplicate__text"></p>
-
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер
+                </p>
               </li>
 
-
-
               <li class="duplicate__list">
-
-                <p class="duplicate__text"></p>
-
+                <p class="duplicate__text">
+                  Защита от скликивания, защита, скликивание, бид-менеджер, менеджер, защита от скликивания
+                </p>
               </li>
 
-
-
               <li class="duplicate__list">
-
-                <p class="duplicate__text"></p>
-
+                <p class="duplicate__text">
+                  менеджер
+                </p>
               </li>
-
             </ul>
-
           </div>
 
-
-
-          <div class="company-control" style="display: none">
-
+          <div class="company-control">
             <div class="company-control__check">
-
               <p class="company-control__text company-control__text--duplicate">
-
                 <span>Найдено</span> 5 дубликатов
-
               </p>
-
             </div>
-
-
 
             <div class="company-control__button-box">
-
               <button class="company-control__btn company-control__btn--duplicate company-control__btn--red "
-
                 type="button">
-
                 Удалить по точному соответствию
-
               </button>
-
               <button class="company-control__btn company-control__btn--green company-control__btn--duplicate"
-
                 type="button">
-
                 Удалить дубликаты
-
               </button>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </div>
 
-
+  <div class="pop-up">
+    <div class="pop-up__body">
+      <div class="pop-up__content">
+        <div class="pop-up__title">
+          Применяем ваши параметры
+        </div>
+        <div class="pop-up__text">
+          Пожалуйста не закрывайте это окно пока мы применяем ваши параметры
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
-
-
 
 </html>

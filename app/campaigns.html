@@ -20,35 +20,20 @@ $email = $_COOKIE['email'];
   <link rel="stylesheet" href="css/style.min.css">
   <!-- Carrot quest BEGIN -->
   <script type="text/javascript">
-    ! function () {
-      function t(t, e) {
-        return function () {
-          window.carrotquestasync.push(t, arguments)
-        }
-      }
-      if ("undefined" == typeof carrotquest) {
-        var e = document.createElement("script");
-        e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
-          .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
-          carrotquest.settings = {};
-        for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
-            "trackMessageInteraction"
-          ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
-      }
-    }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+  !function(){function t(t,e){return function(){window.carrotquestasync.push(t,arguments)}}if("undefined"==typeof carrotquest){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://cdn.carrotquest.app/api.min.js",document.getElementsByTagName("head")[0].appendChild(e),window.carrotquest={},window.carrotquestasync=[],carrotquest.settings={};for(var n=["connect","track","identify","auth","onReady","addCallback","removeCallback","trackMessageInteraction"],a=0;a<n.length;a++)carrotquest[n[a]]=t(n[a])}}(),carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
   </script>
   <!-- Carrot quest END -->
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/script.min.js"></script>
   <script src="js/account-menu.min.js"></script>
   <script src="js/campaigns.min.js"></script>
-  <title>LifeClick - Профиль</title>
+  <title>LifeClick - Защита от скликивания</title>
 </head>
 
 <body>
 
   <div class="profile-header">
-    <div class="profile-header__logo"></div>
+    <div class="profile-header__logo logo-img"></div>
     <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
     <div class="profile-header__wrap">
 
@@ -63,7 +48,7 @@ $email = $_COOKIE['email'];
       </div>
       <div class="profile-header__info">
         <p class="profile-header__text">Аккаунт</p>
-        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+        <a href="#" class="profile-header__account"><?php echo $email ?></a>
       </div>
     </div>
   </div>
@@ -76,7 +61,7 @@ $email = $_COOKIE['email'];
       <div class="sidebar__wrap profile-header__wrap">
         <div class="profile-header__info">
           <p class="profile-header__text">Аккаунт</p>
-          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+          <a href="#" class="profile-header__account"><?php echo $email ?></a>
         </div>
         <div class="balance">
           <div class="balance__status">
@@ -118,7 +103,7 @@ $email = $_COOKIE['email'];
       <h4 class="sidebar__title">
         Инструменты
       </h4>
-      <ul class="sidebar__menu sidebar__menu--tools">
+      <ul class="sidebar__menu sidebar__menu--phrases">
         <li class="sidebar__menu-item sidebar__menu-item--dublicate">
           <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
             Работа с семантическим ядром: удаление дубликатов
@@ -164,7 +149,7 @@ $email = $_COOKIE['email'];
       </div>
 
       <div class="company__info">
-        <div class="company__item">
+        <!-- <div class="company__item">
           <label class="company-item__checkbox">
             <input type="checkbox" id="60893133" value="yes">
             <span class="company-item__checkmark"></span>
@@ -186,322 +171,10 @@ $email = $_COOKIE['email'];
               </p>
             </div>
           </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__stop">
-                Остановлена
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--yes">
-                Защищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--dynemic">
-                Кампания "Динамические объявления" №4
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--dynemic">
-                Кампания "Динамические объявления" №4
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="company__item">
-          <label class="company-item__checkbox">
-            <input type="checkbox" id="60893133" value="yes">
-            <span class="company-item__checkmark"></span>
-          </label>
-          <div class="company-item__wrap">
-            <div class="company-item__description">
-              <p class="company-item__title company-item__title--text-graph">
-                Текстово-графическая кампания №1
-              </p>
-              <p class="company-item__num">№ 12345678</p>
-            </div>
-
-            <div class="company-item__status">
-              <p class="company-status__active">
-                Активна
-              </p>
-              <p class="company-status__protect company-status__protect--no">
-                Незащищена
-              </p>
-            </div>
-          </div>
-        </div>
+        </div> -->
       </div>
 
-      <div class="company-control">
+      <div class="company-control" style="display: none">
         <div class="company-control__check">
           <label class="company-control__checkbox">
             <input class="company-control__input" type="checkbox">
@@ -520,32 +193,7 @@ $email = $_COOKIE['email'];
         </div>
       </div>
     </div>
-
-
-    <div class="company__access"></div>
-    <div class="company__access-box">
-      <h3 class="company-access__title">Для продолжения предоставьте доступ к Яндекс.Директ</h3>
-      <p class="company-access__description">Это необходимо, чтобы мы с помощью Яндекс.Директ API могли получить
-        доступ к вашим рекламным кампаниям и автоматически управлять корректировками ставок.</p>
-      <button id="company-access" class="button company-access__button">Предоставить доступ</button>
-    </div>
-    <h2 class="company__none">Список ваших кампаний пуст</h2>
   </div>
-
- <div class="pop-up">
-   <div class="pop-up__body">
-     <div class="pop-up__content">
-       <div class="pop-up__title">
-         Применяем ваши параметры
-       </div>
-       <div class="pop-up__text">
-         Пожалуйста не закрывайте это окно пока мы применяем ваши параметры
-       </div>
-     </div>
-   </div>
- </div>
-
-
 </body>
 
 </html>
