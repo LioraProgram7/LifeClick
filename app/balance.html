@@ -114,9 +114,9 @@ $email = $_COOKIE['email'];
             Минусатор
           </a>
         </li>
-        <li class="sidebar__menu-item">
-          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
-            Чат для сайта
+        <li class="sidebar__menu-item sidebar__menu-item--minuser">
+          <a class="sidebar__menu-link sidebar__menu-link--minuser" href="#">
+            РСЯ минусатор площадок
           </a>
         </li>
       </ul>
@@ -124,7 +124,7 @@ $email = $_COOKIE['email'];
       <h4 class="sidebar__title">
         Инструменты
       </h4>
-      <ul class="sidebar__menu sidebar__menu--phrases">
+      <ul class="sidebar__menu">
         <li class="sidebar__menu-item sidebar__menu-item--dublicate">
           <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
             Работа с семантическим ядром: удаление дубликатов
@@ -135,9 +135,9 @@ $email = $_COOKIE['email'];
             Генератор UTM-меток
           </a>
         </li>
-        <li class="sidebar__menu-item sidebar__menu-item--minuser">
-          <a class="sidebar__menu-link sidebar__menu-link--minuser" href="#">
-            РСЯ минусатор площадок
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
           </a>
         </li>
       </ul>
@@ -191,13 +191,32 @@ $email = $_COOKIE['email'];
           <h3 class="price-item__title">Базовый</h3>
           <p class="price-item__cost">1 990 ₽</p>
           <ul class="price-item__services">
-            <li class="service-item__account service-item service-item--yes">3 рекламных кампании для защиты от
-              скликивания</li>
-            <li class="service-item service-item__account service-item--yes">База данных: > 135 млн. проверенных
-              пользователей</li>
-            <li class="service-item__account service-item service-item--yes">Автоматическое управление ставками: 1000<br>ключевых фраз</li>
-            <li class="service-item__account service-item service-item--yes">Минусатор поисковых запросов</li>
-            <li class="service-item__account service-item service-item--no">Персональный менеджер</li>
+            <li class="service-item__account service-item service-item--yes">
+              Защита от скликивания:<br>
+              3 рекламные кампании
+            </li>
+            <li class="service-item service-item__account service-item--yes">
+              База данных: > 135 млн. проверенных
+              пользователей
+            </li>
+            <li class="service-item__account service-item service-item--yes">
+              Автоматическое управление ставками:
+              1000<br>ключевых фраз
+            </li>
+            <li class="service-item__account service-item service-item--yes">
+              Минусатор поисковых запросов
+            </li>
+            <li class="service-item service-item--yes">
+              Минустор площадок РСЯ
+            </li>
+            <li class="service-item service-item--no">
+              Персональный менеджер
+            </li>
+            <li class="service-item service-item--no">
+              Мультиаккаунт:<br>
+              Возможность привязать<br>
+              3 аккаунта. +1999 ₽ За последующие аккаунты
+            </li>
           </ul>
           <div class="price-item__button">
             <a href="#" class="price-item__button--wide button">Выбрать план</a>
@@ -207,11 +226,32 @@ $email = $_COOKIE['email'];
           <h3 class="price-item__title">Стандарт</h3>
           <p class="price-item__cost">4 990 ₽</p>
           <ul class="price-item__services">
-            <li class="service-item__account service-item service-item--yes">10 рекламных кампаний для защиты от скликивания</li>
-            <li class="service-item__account service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
-            <li class="service-item__account service-item service-item--yes">Автоматическое управление ставками:<br>5000 ключевых фраз</li>
-            <li class="service-item__account service-item service-item--yes">Минусатор поисковых запросов</li>
-            <li class="service-item__account service-item service-item--yes">Персональный менеджер</li>
+            <li class="service-item__account service-item service-item--yes">
+              Защита от скликивания:<br>
+              10 рекламных кампаний
+            </li>
+            <li class="service-item__account service-item service-item--yes">
+              База данных: > 135 млн. проверенных
+              пользователей
+            </li>
+            <li class="service-item__account service-item service-item--yes">
+              Автоматическое управление ставками:<br>5000
+              ключевых фраз
+            </li>
+            <li class="service-item__account service-item service-item--yes">
+              Минусатор поисковых запросов
+            </li>
+            <li class="service-item service-item--yes">
+              Минустор площадок РСЯ
+            </li>
+            <li class="service-item service-item--yes">
+              Персональный менеджер
+            </li>
+            <li class="service-item service-item--no">
+              Мультиаккаунт:<br>
+              Возможность привязать<br>
+              3 аккаунта. +1999 ₽ За последующие аккаунты
+            </li>
           </ul>
           <div class="price-item__button">
             <a href="#" class="price-item__button--wide button">Выбрать план</a>
@@ -221,12 +261,33 @@ $email = $_COOKIE['email'];
           <h3 class="price-item__title">VIP</h3>
           <p class="price-item__cost">9 990 ₽</p>
           <ul class="price-item__services">
-            <li class="service-item__account service-item service-item--yes">100 рекламных кампаний для защиты от скликивания</li>
-            <li class="service-item__account service-item service-item--yes">База данных: > 135 млн. проверенных пользователей</li>
-            <li class="service-item__account service-item service-item--yes">Автоматическое управление ставками:<br>Неограниченное количество
-              ключевых фраз</li>
-            <li class="service-item__account service-item service-item--yes">Минусатор поисковых запросов</li>
-            <li class="service-item__account service-item service-item--yes">Персональный менеджер</li>
+            <li class="service-item__account service-item service-item--yes">
+              Защита от скликивания:<br>
+              Неограниченное количество рекламных кампаний
+            </li>
+            <li class="service-item__account service-item service-item--yes">
+              База данных: > 135 млн. проверенных
+              пользователей
+            </li>
+            <li class="service-item__account service-item service-item--yes">
+              Автоматическое управление
+              ставками:<br>Неограниченное количество
+              ключевых фраз
+            </li>
+            <li class="service-item__account service-item service-item--yes">
+              Минусатор поисковых запросов
+            </li>
+            <li class="service-item service-item--yes">
+              Минустор площадок РСЯ
+            </li>
+            <li class="service-item service-item--yes">
+              Персональный менеджер
+            </li>
+            <li class="service-item service-item--yes">
+              Мультиаккаунт:<br>
+              Возможность привязать<br>
+              3 аккаунта. +1999 ₽ За последующие аккаунты
+            </li>
           </ul>
           <div class="price-item__button">
             <a href="#" class="price-item__button--wide button">Выбрать план</a>

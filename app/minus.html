@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>LifeClick - Минусатор площадок</title>
+</head>
+
+<body>
+
+  <div class="profile-header">
+    <div class="profile-header__logo logo-img"></div>
+    <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
+    <div class="profile-header__wrap">
+
+      <div class="balance">
+        <div class="balance__status">
+          <p class="profile-header__text">Баланс</p>
+          <span id="amount">0,00 ₽</span>
+        </div>
+        <div class="balance__button">
+          <a href="#" class="balance__link">Пополнить</a>
+        </div>
+      </div>
+      <div class="profile-header__info">
+        <p class="profile-header__text">Аккаунт</p>
+        <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="minus__content">
+    <nav class="sidebar">
+
+      <div class="sidebar__wrap profile-header__wrap">
+        <div class="profile-header__info">
+          <p class="profile-header__text">Аккаунт</p>
+          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru</a>
+        </div>
+        <div class="balance">
+          <div class="balance__status">
+            <p class="profile-header__text">Баланс</p>
+            <span id="amount">0,00 ₽</span>
+          </div>
+          <div class="balance__button">
+            <a href="#" class="balance__link">Пополнить</a>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sidebar__title">
+        Управление
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
+            Защита от скликивания
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--control" href="#">
+            Управление ставками
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--minus" href="#">
+            Минусатор
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--minuser">
+          <a class="sidebar__menu-link sidebar__menu-link--minuser" href="#">
+            РСЯ минусатор площадок
+          </a>
+        </li>
+      </ul>
+
+      <h4 class="sidebar__title">
+        Инструменты
+      </h4>
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item sidebar__menu-item--dublicate">
+          <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
+            Работа с семантическим ядром: удаление дубликатов
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--generator">
+          <a class="sidebar__menu-link sidebar__menu-link--generator" href="#">
+            Генератор UTM-меток
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
+          </a>
+        </li>
+      </ul>
+
+      <ul class="sidebar__menu sidebar__menu--bottom">
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+            Тарифы
+          </a>
+        </li>
+        <li class="sidebar__menu-item sidebar__menu-item--help">
+          <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+            Помощь
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="minus">
+      <div class="minus__wrapper">
+        <div class="minus__wrapper-line">
+          <div class="minus__table">
+            <!-- шапка таблицы -->
+            <ul class="minus__head">
+              <li class="minus__head-item minus__head-item--name minus__head-item--decstop">
+                <label class="minus__head-label minus-label">
+                  <input class="minus__head-input" type="checkbox">
+                  Название
+                  <span class="minus__head-check minus-check"></span>
+                </label>
+              </li>
+              <li class="minus__head-item minus__head-item--name minus__head-item--mobile">
+                <label class="minus__head-label minus-label">
+                  <input class="minus__head-input" type="checkbox">
+                  Название/Фраза
+                  <span class="minus__head-check minus-check"></span>
+                </label>
+              </li>
+              <li class="minus__head-item">Показы</li>
+              <li class="minus__head-item">Клики</li>
+              <li class="minus__head-item">CTR (%)</li>
+              <li class="minus__head-item">Отказы (%)</li>
+            </ul>
+
+            <!-- основная часть таблицы -->
+            <ul class="minus__list">
+              <!-- первая строка  -->
+              <li class="minus__list-item">
+                <label class="minus__area-label minus-label">
+                  <input class="minus__area-input" type="checkbox">
+                  <span class="minus__area-check minus-check minus-checked"></span>
+                </label>
+
+                <div class="minus__list-info">
+                  <h4 class="minus__list-title">
+                    <span class="minus__list-name">
+                      Текстово-графическая кампания №1
+                    </span>
+                    <span class="minus__list-plus phrases__checkbox-plus"></span>
+                  </h4>
+                  <span class="minus__list-number">№ 12345678</span>
+                </div>
+
+                <ul class="minus__area-box">
+                  <li class="minus__area-list--name">
+                    <label class="minus__area-label minus-label">
+                      <input class="minus__area-input" type="checkbox">
+                      <span class="minus__area-check minus-check"></span>
+                    </label>
+                    100biografiy.ru
+                  </li>
+                  <li class="minus__area-list--mobile">
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Показы</span>
+                      <span class="minus__area-num">1</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Клики</span>
+                      <span class="minus__area-num">0</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">CTR(%)</span>
+                      <span class="minus__area-num">0.00</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Отказы (%)</span>
+                      <span class="minus__area-num">-</span>
+                    </div>
+                  </li>
+                  <li class="minus__area-list">1</li>
+                  <li class="minus__area-list">0</li>
+                  <li class="minus__area-list">0.00</li>
+                  <li class="minus__area-list">-</li>
+                </ul>
+
+                <ul class="minus__area-box">
+                  <li class="minus__area-list--name">
+                    <label class="minus__area-label minus-label">
+                      <input class="minus__area-input" type="checkbox">
+                      <span class="minus__area-check minus-check"></span>
+                    </label>
+                    100realt.ru
+                  </li>
+                  <li class="minus__area-list--mobile">
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Показы</span>
+                      <span class="minus__area-num">6</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Клики</span>
+                      <span class="minus__area-num">0</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">CTR(%)</span>
+                      <span class="minus__area-num">0.00</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Отказы (%)</span>
+                      <span class="minus__area-num">-</span>
+                    </div>
+                  </li>
+                  <li class="minus__area-list">6</li>
+                  <li class="minus__area-list">0</li>
+                  <li class="minus__area-list">0.00</li>
+                  <li class="minus__area-list">-</li>
+                </ul>
+
+                <ul class="minus__area-box">
+                  <li class="minus__area-list--name">
+                    <label class="minus__area-label minus-label">
+                      <input class="minus__area-input" type="checkbox">
+                      <span class="minus__area-check minus-check"></span>
+                    </label>
+                    101.ru
+                  </li>
+                  <li class="minus__area-list--mobile">
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Показы</span>
+                      <span class="minus__area-num">1</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Клики</span>
+                      <span class="minus__area-num">0</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">CTR(%)</span>
+                      <span class="minus__area-num">0.00</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Отказы (%)</span>
+                      <span class="minus__area-num">-</span>
+                    </div>
+                  </li>
+                  <li class="minus__area-list">1</li>
+                  <li class="minus__area-list">0</li>
+                  <li class="minus__area-list">0.00</li>
+                  <li class="minus__area-list">-</li>
+                </ul>
+              </li>
+
+              <!-- вторая строка  -->
+              <li class="minus__list-item">
+                <label class="minus__area-label minus-label">
+                  <input class="minus__area-input" type="checkbox">
+                  <span class="minus__area-check minus-check minus-checked"></span>
+                </label>
+
+                <div class="minus__list-info">
+                  <h4 class="minus__list-title">
+                    <span class="minus__list-name">
+                      Текстово-графическая кампания №1
+                    </span>
+                    <span class="minus__list-plus phrases__checkbox-plus"></span>
+                  </h4>
+                  <span class="minus__list-number">№ 12345678</span>
+                </div>
+
+                <ul class="minus__area-box">
+                  <li class="minus__area-list--name">
+                    <label class="minus__area-label minus-label">
+                      <input class="minus__area-input" type="checkbox">
+                      <span class="minus__area-check minus-check"></span>
+                    </label>
+                    1tv.ru
+                  </li>
+                  <li class="minus__area-list--mobile">
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Показы</span>
+                      <span class="minus__area-num">4</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Клики</span>
+                      <span class="minus__area-num">0</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">CTR(%)</span>
+                      <span class="minus__area-num">0.00</span>
+                    </div>
+                    <div class="minus__area-item">
+                      <span class="minus__area-show">Отказы (%)</span>
+                      <span class="minus__area-num">-</span>
+                    </div>
+                  </li>
+                  <li class="minus__area-list">4</li>
+                  <li class="minus__area-list">0</li>
+                  <li class="minus__area-list">0.00</li>
+                  <li class="minus__area-list">-</li>
+                </ul>
+              </li>
+
+              <!-- третья строка  -->
+              <li class="minus__list-item">
+                <label class="minus__area-label minus-label">
+                  <input class="minus__area-input" type="checkbox">
+                  <span class="minus__area-check minus-check minus-checked"></span>
+                </label>
+
+                <div class="minus__list-info">
+                  <h4 class="minus__list-title">
+                    <span class="minus__list-name">
+                      Текстово-графическая кампания №1
+                    </span>
+                    <span class="minus__list-plus phrases__checkbox-plus"></span>
+                  </h4>
+                  <span class="minus__list-number">№ 12345678</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-control">
+        <div class="company-control__check">
+          <label class="company-control__checkbox">
+            <input class="company-control__input" type="checkbox">
+            <span class="company-control__checkmark"></span>
+          </label>
+          <div class="company-control__text control-text">
+            <span>4 Площадки</span>
+            <p class="company-control__text-active">4 aктивные</p>
+          </div>
+        </div>
+
+        <div class="company-control__button-box">
+          <button class="company-control__btn company-control__btn--green minus--btn" type="button">
+            Запретить показы на площадках
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

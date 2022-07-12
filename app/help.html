@@ -1,80 +1,181 @@
 <?php
+
 session_start();
+
 if (!isset($_COOKIE['access_token'], $_COOKIE['email']))
+
 {
+
     header("Location: auth");
+
     die();
+
 }
+
 $access_token = $_COOKIE['access_token'];
+
 $email = $_COOKIE['email'];
+
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="ru">
+
+
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Изменение настроек аккаунта" />
-  <meta http-equiv="Cache-Control" content="no-cache" />
+
   <link rel="stylesheet" href="css/style.min.css">
+
   <!-- Carrot quest BEGIN -->
+
   <script type="text/javascript">
-  !function(){function t(t,e){return function(){window.carrotquestasync.push(t,arguments)}}if("undefined"==typeof carrotquest){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://cdn.carrotquest.app/api.min.js",document.getElementsByTagName("head")[0].appendChild(e),window.carrotquest={},window.carrotquestasync=[],carrotquest.settings={};for(var n=["connect","track","identify","auth","onReady","addCallback","removeCallback","trackMessageInteraction"],a=0;a<n.length;a++)carrotquest[n[a]]=t(n[a])}}(),carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
+    ! function () {
+
+      function t(t, e) {
+
+        return function () {
+
+          window.carrotquestasync.push(t, arguments)
+
+        }
+
+      }
+
+      if ("undefined" == typeof carrotquest) {
+
+        var e = document.createElement("script");
+
+        e.type = "text/javascript", e.async = !0, e.src = "https://cdn.carrotquest.app/api.min.js", document
+
+          .getElementsByTagName("head")[0].appendChild(e), window.carrotquest = {}, window.carrotquestasync = [],
+
+          carrotquest.settings = {};
+
+        for (var n = ["connect", "track", "identify", "auth", "onReady", "addCallback", "removeCallback",
+
+            "trackMessageInteraction"
+
+          ], a = 0; a < n.length; a++) carrotquest[n[a]] = t(n[a])
+
+      }
+
+    }(), carrotquest.connect("50675-2821b665ccc4d101d3512b20e3");
   </script>
+
   <!-- Carrot quest END -->
+
   <script src="js/jquery-3.6.0.min.js"></script>
+
   <script src="js/script.min.js"></script>
+
   <script src="js/account-menu.min.js"></script>
-  <script src="js/account-edit.min.js"></script>
-  <title>LifeClick - Профиль</title>
+
+  <script src="js/help.min.js"></script>
+
+  <title>Ananas.Click - Помощь</title>
+
 </head>
 
+
+
 <body>
+
+
+
   <div class="profile-header">
+
     <div class="profile-header__logo logo-img"></div>
+
     <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
+
     <div class="profile-header__wrap">
 
+
+
       <div class="balance">
+
         <div class="balance__status">
+
           <p class="profile-header__text">Баланс</p>
+
           <span id="amount">0,00 ₽</span>
+
         </div>
+
         <div class="balance__button">
+
           <a href="#" class="balance__link">Пополнить</a>
+
         </div>
+
       </div>
+
       <div class="profile-header__info">
+
         <p class="profile-header__text">Аккаунт</p>
+
         <a href="#" class="profile-header__account"><?php echo $email ?></a>
+
       </div>
+
     </div>
+
   </div>
 
+
+
   <div class="content">
-    
+
     <nav class="sidebar">
 
+
+
       <div class="sidebar__wrap profile-header__wrap">
+
         <div class="profile-header__info">
+
           <p class="profile-header__text">Аккаунт</p>
+
           <a href="#" class="profile-header__account"><?php echo $email ?></a>
+
         </div>
+
         <div class="balance">
+
           <div class="balance__status">
+
             <p class="profile-header__text">Баланс</p>
+
             <span id="amount">0,00 ₽</span>
+
           </div>
+
           <div class="balance__button">
+
             <a href="#" class="balance__link">Пополнить</a>
+
           </div>
+
         </div>
+
       </div>
 
+
+
       <h4 class="sidebar__title">
+
         Управление
+
       </h4>
+
       <ul class="sidebar__menu">
         <li class="sidebar__menu-item">
           <a class="sidebar__menu-link sidebar__menu-link--protection" href="#">
@@ -91,9 +192,9 @@ $email = $_COOKIE['email'];
             Минусатор
           </a>
         </li>
-        <li class="sidebar__menu-item">
-          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
-            Чат для сайта
+        <li class="sidebar__menu-item sidebar__menu-item--minuser">
+          <a class="sidebar__menu-link sidebar__menu-link--minuser" href="#">
+            РСЯ минусатор площадок
           </a>
         </li>
       </ul>
@@ -101,7 +202,7 @@ $email = $_COOKIE['email'];
       <h4 class="sidebar__title">
         Инструменты
       </h4>
-      <ul class="sidebar__menu sidebar__menu--phrases">
+      <ul class="sidebar__menu">
         <li class="sidebar__menu-item sidebar__menu-item--dublicate">
           <a class="sidebar__menu-link sidebar__menu-link--dublicate" href="#">
             Работа с семантическим ядром: удаление дубликатов
@@ -112,60 +213,51 @@ $email = $_COOKIE['email'];
             Генератор UTM-меток
           </a>
         </li>
-        <li class="sidebar__menu-item sidebar__menu-item--minuser">
-          <a class="sidebar__menu-link sidebar__menu-link--minuser" href="#">
-            РСЯ минусатор площадок
+        <li class="sidebar__menu-item">
+          <a class="sidebar__menu-link sidebar__menu-link--chat" href="#">
+            Чат для сайта
           </a>
         </li>
       </ul>
+
+
 
       <ul class="sidebar__menu sidebar__menu--bottom">
+
         <li class="sidebar__menu-item">
+
           <a class="sidebar__menu-link sidebar__menu-link--tariffs" href="#">
+
             Тарифы
+
           </a>
+
         </li>
+
         <li class="sidebar__menu-item sidebar__menu-item--help">
+
           <a class="sidebar__menu-link sidebar__menu-link--help" href="#">
+
             Помощь
+
           </a>
+
         </li>
+
       </ul>
+
     </nav>
 
-    <div class="profile-info">
-        <div class="profile-info__change">
-          <h1 class="profile-info__title">
-            Персональная информация
-          </h1>
-          <p class="profile-info__description">
-            Здесь можно изменить настройки аккаунта.
-          </p>
-          <input type="E-mail" class="profile-info__input" placeholder="E-mail">
-          <input type="tel" class="profile-info__input" placeholder="Телефон" minlength="9" maxlength="14">
-          <h1 class="profile-info__title profile-info__title--parol">Сменить пароль</h1>
-          <input id="old-password" type="password" class="profile-info__input" placeholder="Старый пароль">
-          <input id="new-password" type="password" class="profile-info__input" placeholder="Новый пароль">
-          <input id="new-password-accept" type="password" class="profile-info__input" placeholder="Подтверждение пароль">
-          <button id="button-save" class="button profile-info__button profile-info__button--save">Сохранить</button>
-          <p class="profile-info__yandex">
-            Яндекс аккаунт привязан
-          </p>
-          <button id="button-yandex--action" class="button profile-info__button profile-info__button--yandex">
-            Отвязать Яндекс аккаунт
-          </button>
-          <button id="button-exit" class="button profile-info__button profile-info__button--exit">Выход из
-            аккаунта</button>
-        </div>
-        <div class="company__access"></div>
-        <div class="company__access-box">
-          <h3 class="company-access__title">Отвязка Яндекс аккаунта</h3>
-          <p class="company-access__description">При отвязке аккаунта, защита со всех ваших кампаний будет снята</p>
-          <button id="rate-cancel" class="button company-access__rate company-access__rate--cancel">Отмена</button>
-          <button id="rate-ok" class="button company-access__rate company-access__rate--ok">Подтверждение</button>
-        </div>
-    </div>
+
+
+    <div class="help"></div>
+
   </div>
+
+
+
 </body>
+
+
 
 </html>
