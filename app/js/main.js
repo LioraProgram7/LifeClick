@@ -1,20 +1,21 @@
 $(function () {
 
-  // для страницы help
-  $('.help__subtitle').slideToggle();
-  $('.help__btn--one').on('click', function () {
-    $('.help__subtitle--one').slideToggle();
-    $(this).toggleClass('transform');
+  // $('.your-class').slick({
+  //   dots: true,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 1,
+  //   centerMode: true,
+  //   variableWidth: true
+  // });
+
+  // для аккаутов
+  $('.profile-header__content').hide();
+  $('.profile-header__info').on('click', function () {
+    $('.profile-header__content').slideToggle();
   });
 
-  $('.help__btn--two').on('click', function () {
-    $('.help__subtitle--two').slideToggle();
-    $(this).toggleClass('transform');
-  });
 
-  $('.help__btn--three').on('click', function () {
-    $('.help__subtitle--three').slideToggle();
-    $(this).toggleClass('transform');
-  });
+
 
 });

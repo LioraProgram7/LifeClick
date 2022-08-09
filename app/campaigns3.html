@@ -1,0 +1,58 @@
+<?php include("include/not_login.php"); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Выбор кампаний, для которых вы хотите включить защиту" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <?php include("include/main.php"); ?>
+  <title>Ananas.Click - Защита от скликивания</title>
+</head>
+
+<body>
+  <?php include("include/profile_header.php") ?>
+
+  <div class="content">
+    <?php include("include/sidebar.php"); ?>
+
+    <div class="company">
+      <div class="company__check">
+        <div class="company-header__check">
+          <label class="company-header__checkbox">
+            <input type="checkbox" value="yes">
+            <span class="company-header__checkmark"></span>
+          </label>
+          <p class="company-header__title">Название</p>
+          <p class="company-header__title company-header__title--adaptive">Название/Cтатус</p>
+        </div>
+        <p class="company-header__text">Статус</p>
+      </div>
+
+      <div class="company__info"></div>
+
+      <div class="company-control" style="display: none">
+        <div class="company-control__check">
+          <label class="company-control__checkbox">
+            <input class="company-control__input" type="checkbox">
+            <span class="company-control__checkmark"></span>
+          </label>
+          <p class="company-control__text">2 Кампании</p>
+        </div>
+
+        <div class="company-control__button-box">
+          <button class="company-control__btn company-control__btn--red" type="button">
+            Отключить <span>защиту</span>
+          </button>
+          <button class="company-control__btn company-control__btn--green" type="button">
+            Включить <span>защиту</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

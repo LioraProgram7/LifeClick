@@ -1,0 +1,73 @@
+<?php include("include/not_login.php"); ?>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <?php include("include/main.php"); ?>
+  <title>Ananas.Click - Минусатор площадок</title>
+</head>
+
+<body>
+  <?php include("include/profile_header.php"); ?>
+
+  <div class="minus__content">
+    <?php include("include/sidebar.php"); ?>
+    <div class="minus">
+      <div class="minus__wrapper">
+        <div class="minus__wrapper-line">
+          <div class="minus__table">
+            <!-- шапка таблицы -->
+            <ul class="minus__head">
+              <li class="minus__head-item minus__head-item--name minus__head-item--decstop">
+                <label class="minus__head-label minus-label">
+                  <input class="minus__head-input" type="checkbox">
+                  Название
+                  <span class="minus__head-check minus-check"></span>
+                </label>
+              </li>
+              <li class="minus__head-item minus__head-item--name minus__head-item--mobile">
+                <label class="minus__head-label minus-label">
+                  <input class="minus__head-input" type="checkbox">
+                  Название/Фраза
+                  <span class="minus__head-check minus-check"></span>
+                </label>
+              </li>
+              <li class="minus__head-item">Показы</li>
+              <li class="minus__head-item">Клики</li>
+              <li class="minus__head-item">CTR (%)</li>
+              <li class="minus__head-item">Отказы (%)</li>
+            </ul>
+
+            <!-- основная часть таблицы -->
+            <ul class="minus__list"></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-control" style="display: none">
+        <div class="company-control__check">
+          <label class="company-control__checkbox">
+            <input class="company-control__input" type="checkbox">
+            <span class="company-control__checkmark"></span>
+          </label>
+          <div class="company-control__text control-text">
+            <span>4 Площадки</span>
+            <p class="company-control__text-active">4 aктивные</p>
+          </div>
+        </div>
+
+        <div class="company-control__button-box">
+          <button class="company-control__btn company-control__btn--green minus--btn" type="button">
+            Запретить показы на площадках
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

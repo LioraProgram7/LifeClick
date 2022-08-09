@@ -50,14 +50,15 @@ $email = $_COOKIE['email'];
   <script src="js/script.min.js"></script>
   <script src="js/account-menu.min.js"></script>
   <script src="js/balance.min.js"></script>
-  <title>Ananas.Click - Тарифы</title>
+  <title>LifeClick - Тарифы</title>
 </head>
 
 <body>
   <div class="profile-header">
     <div class="profile-header__logo logo-img"></div>
     <a href="#" class="profile-header__menu-button"><img src="img/icons/accaunt-menu.svg" alt="#"></a>
-    <div id="header" class="profile-header__wrap">
+    <div class="profile-header__wrap">
+
       <div class="balance">
         <div class="balance__status">
           <p class="profile-header__text">Баланс</p>
@@ -67,44 +68,9 @@ $email = $_COOKIE['email'];
           <a href="#" class="balance__link">Пополнить</a>
         </div>
       </div>
-
-      <!-- добавлено переключатель аккаунт -->
-      <div class="profile-header__dropdown">
-        <button class="profile-header__info">
-          <p class="profile-header__text">Аккаунт</p>
-          <a href="#" class="profile-header__account"><?php echo $email ?>info@swikings.ru
-          </a>
-          <img class="profile-header__account-img" src="img/icons/avatar-white.svg" alt="фото профиля">
-        </button>
-        <div class="profile-header__content">
-          <div class="profile-header__item">
-            <a class="profile-header__account profile-header__account-ellips" href="#">
-              admin@swikings.ru
-              <img class="profile-header__account-blue" src="img/icons/avatar-blue.svg" alt="фото профиля">
-            </a>
-          </div>
-
-          <div class="profile-header__item">
-            <a class="profile-header__account profile-header__account-ellips" href="#">
-              daniil-210968@yandex.ru
-              <img class="profile-header__account-blue" src="img/icons/avatar-blue.svg" alt="фото профиля">
-            </a>
-          </div>
-
-          <div class="profile-header__item">
-            <a class="profile-header__account profile-header__account-ellips" href="#">
-              celedkoooo@gmail.com
-              <img class="profile-header__account-blue" src="img/icons/avatar-blue.svg" alt="фото профиля">
-            </a>
-          </div>
-
-          <div class="profile-header__item">
-            <a class="profile-header__account profile-header__account-add" href="#">
-              Добавить аккаунт
-              <img class="profile-header__account-blue" src="img/icons/add-account.svg" alt="фото профиля">
-            </a>
-          </div>
-        </div>
+      <div class="profile-header__info">
+        <p class="profile-header__text">Аккаунт</p>
+        <a href="#" class="profile-header__account"><?php echo $email ?></a>
       </div>
     </div>
   </div>
@@ -216,57 +182,9 @@ $email = $_COOKIE['email'];
           <p class="balance-item__disconnect">Подключен</p>
           <p class="balance-item__description">С вашей карты будет автоматически списываться сумма тарифа каждый месяц.
           </p>
+
         </li>
       </ul>
-
-      <!-- добавлено аккаунты -->
-      <h2 class="profile-info__title account__title">Аккаунты</h2>
-      <div class="account__wrap">
-        <a class="account__status account__status--paid account__status--active" href="#popup-account">
-          <img class="account__status-img account__status-img--white" src="img/avatarbig-white.png" alt="фото профиля">
-          <div class="account__status-inner">
-            <span class="account__status-email">info@swikings.ru</span>
-            <span class="account__status-paid">Оплачено</span>
-          </div>
-        </a>
-
-        <a class="account__status account__status--paid" href="#popup-account">
-          <img class="account__status-img account__status-img--blue" src="img/avatarbig-blue.png" alt="фото профиля">
-          <div class="account__status-inner">
-            <span class="account__status-email">admin@swikings.ru</span>
-            <span class="account__status-paid">Оплачено</span>
-          </div>
-        </a>
-
-        <a class="account__status account__status--paid" href="#popup-account">
-          <img class="account__status-img account__status-img--blue" src="img/avatarbig-blue.png" alt="фото профиля">
-          <div class="account__status-inner">
-            <span class="account__status-email">celedkoooo@gmail.com</span>
-            <span class="account__status-paid">Оплачено</span>
-          </div>
-        </a>
-
-        <a class="account__status" href="#popup-account">
-          <img class="account__status-img account__status-img--blue" src="img/avatarbig-blue.png" alt="фото профиля">
-          <div class="account__status-inner">
-            <span class="account__status-email">daniil-210968@yandex.ru</span>
-            <span class="account__status-nopaid">Не оплачено</span>
-          </div>
-        </a>
-        <a class="account__status" href="#popup-account">
-          <img class="account__status-img account__status-img--blue" src="img/icons/add-account.svg" alt="фото профиля">
-          <div class="account__status-inner">
-            <span class="account__status-add">Добавить аккаунт</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="your-class">
-        <div>your content</div>
-        <div>your content</div>
-        <div>your content</div>
-      </div>
-
       <h2 class="profile-info__title">Тарифы</h2>
       <ul class="price__list account__price">
         <li id="616c096755cd9" class="price-item price-item__account">
@@ -388,29 +306,6 @@ $email = $_COOKIE['email'];
       </div>
     </div>
   </div>
-
-  <!-- Добавила попап -->
-  <div id="popup-account" class="popup-account">
-    <a class="popup-account__area" href="#header"></a>
-    <div class="popup-account__body">
-      <div class="popup-account__content">
-        <div class="popup-account__titlle">
-          Управление аккаунтом
-        </div>
-        <div class="popup-account__text">
-          Выберите действие, которые вы хотите сделать с аккаунтом
-        </div>
-        <div class="popup-account__inner">
-          <button class="popup-account__btn popup-account__btn-untie">Отвязать</button>
-          <button class="popup-account__btn popup-account__btn-pay">Оплатить</button>
-          <button class="popup-account__btn popup-account__btn-cancel">Отмена</button>
-          <button class="popup-account__btn popup-account__btn-switch">Переключиться</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <script src="js/main.min.js"></script>
 </body>
 
 </html>
