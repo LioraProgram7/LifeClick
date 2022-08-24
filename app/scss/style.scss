@@ -7832,11 +7832,23 @@ p {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  padding-bottom: 5px;
+}
+
+.account__wrap:hover {
   overflow-x: auto;
 }
 
 .account__wrap::-webkit-scrollbar {
-  width: 0;
+  -webkit-appearance: none;
+  height: 10px;
+}
+
+.account__wrap::-webkit-scrollbar-thumb {
+  height: 7px;
+  border-radius: 15px;
+  background-color: #cfcfcf;
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .account__status {
@@ -7864,9 +7876,8 @@ p {
   width: 59px;
   height: 59px;
   margin-right: 10px;
+  border-radius: 50%;
 }
-
-.account__plus {}
 
 .account__plus-img {
   width: 59px;
